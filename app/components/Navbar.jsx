@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -14,12 +14,27 @@ import {
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [shadow, setShadow] = useState(false);
+
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
+
     const handleNav = () => {
         setMenuOpen(!menuOpen);
       };
 
   return (
-    <nav className="top-0 w-full h-24 shadow-xl bg-white">
+    <nav className={shadow  ? "fixed w-full h-20 shadow-xl z-[100] bg-white"
+    : "fixed w-full h-20 z-[100]" }>
     <div className="flex justify-around items-center h-full w-full px-4 2xl:px-16">
       <Link href="/">
         <Image
