@@ -1,4 +1,5 @@
 import { Inter } from "next/font/google";
+import Faq from "./components/Faq";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Hero2 from "./components/Hero2";
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Services />
+    <Faq />
     </div>
   );
 }

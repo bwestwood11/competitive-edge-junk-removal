@@ -15,6 +15,7 @@ import {
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shadow, setShadow] = useState(false);
+ 
 
   useEffect(() => {
     const handleShadow = () => {
@@ -34,7 +35,7 @@ const Navbar = () => {
 
   return (
     <nav className={shadow  ? "fixed w-full h-20 shadow-xl z-[100] bg-white"
-    : "fixed w-full h-20 z-[100]" }>
+    : "w-full h-20 z-[100]" }>
     <div className="flex justify-around items-center h-full w-full px-4 2xl:px-16">
       <Link href="/">
         <Image
@@ -80,7 +81,7 @@ const Navbar = () => {
     <div
       className={
         menuOpen
-          ? "fixed left-0 top-0 w-[65%] sm:hidden h-screen bg-[#ecf0f3] p-10 ease-in duration-500 z-10"
+          ? "fixed left-0 top-0 w-[100%] sm:hidden h-screen bg-white p-10 ease-in duration-500 z-[1000]"
           : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
       }
     >
@@ -90,7 +91,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex-col py-4">
-        <ul>
+        <ul className="text-lg">
           <Link href="/">
             <li
               onClick={() => setMenuOpen(false)}
@@ -115,6 +116,14 @@ const Navbar = () => {
               About
             </li>
           </Link>
+          <Link href="/pricing">
+            <li
+              onClick={() => setMenuOpen(false)}
+              className="py-4 cursor-pointer"
+            >
+              Pricing
+            </li>
+          </Link>
           <Link href="/contact">
             <li
               onClick={() => setMenuOpen(false)}
@@ -126,17 +135,17 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="flex flex-row justify-around pt-10 items-center">
-        <AiOutlineInstagram size={30} className="cursor-pointer" />
-        <AiOutlineFacebook size={30} className="cursor-pointer" />
-        <AiOutlineTwitter size={30} className="cursor-pointer" />
+        <AiOutlineInstagram size={40} className="cursor-pointer" />
+        <AiOutlineFacebook size={40} className="cursor-pointer" />
+        <AiOutlineTwitter size={40} className="cursor-pointer" />
       </div>
       <Link href="/">
         <Image
           src={logo}
           alt="Logo"
-          width="145"
-          height="95"
-          className="pt-6 mx-auto"
+          width="245"
+          height="195"
+          className="pt-8 mx-auto"
         />
       </Link>
     </div>
