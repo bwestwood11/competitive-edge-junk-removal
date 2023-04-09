@@ -8,9 +8,11 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Stats from "./components/Stats";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
   return (
     <div>
       <Hero />
