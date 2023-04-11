@@ -1,3 +1,5 @@
+'use client'
+
 import { Inter } from "next/font/google";
 import Faq from "./components/Faq";
 import Header from "./components/Header";
@@ -7,7 +9,6 @@ import Information from "./components/Information";
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Stats from "./components/Stats";
-
 
 const inter = Inter({ subsets: ["latin"] });
 

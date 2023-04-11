@@ -6,6 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import PricingCard from "../components/PricingCard";
 
+
 export default function Pricing() {
   const [prices, setPrices] = useState([])
 
@@ -19,13 +20,6 @@ export default function Pricing() {
     setPrices(data)
    }
 
-   const handleSubscription = async (e, price) => {
-     e.preventDefault();
-     const { data } = await axios.post('/api/payment', {
-      priceId: price.id,
-     });
-     window.open(data)
-   }
 
   return (
     <section className="w-full">
@@ -48,6 +42,8 @@ export default function Pricing() {
           </p>
         </div>
       </div>
+
+              {/* Pricing Section Card */}
       <div className="mx-auto max-w-4xl text-center mt-10 items-center">
           <h2 className="text-3xl font-semibold leading-7 text-[#f1592a]">
             Pricing
@@ -66,7 +62,6 @@ export default function Pricing() {
           <PricingCard
            price={price}
            key={price.id}
-           handleSubscription={handleSubscription}
            />
         ))}
       </div>
