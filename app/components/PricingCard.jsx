@@ -178,7 +178,7 @@ function PricingCard({ price }) {
 
   const handleSubscription = async (e) => {
     e.preventDefault();
-    console.log(price.id);
+    // console.log(price.id);
     const { data } = await axios.post(
       "/api/payment",
       {
@@ -191,6 +191,7 @@ function PricingCard({ price }) {
       }
     );
     window.open(data);
+    console.log(data)
   };
 
 

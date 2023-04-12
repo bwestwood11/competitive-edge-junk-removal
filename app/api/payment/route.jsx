@@ -27,10 +27,10 @@ export async function POST(req) {
   console.log(req)
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   // const { data } = await req.json();
-     console.log(stripe)
   let data = await req.json();
-
+console.log(process.env.STRIPE_SECRET_KEY)
   let priceId = data.priceId;
+  console.log('priceId', priceId)
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
