@@ -50,8 +50,8 @@ export async function POST(req) {
       },
     ],
     mode: "payment",
-    success_url: "http://localhost:3000/success || https://competitiveedgedumpsters.com/success",
-    cancel_url: "http://localhost:3000/cancel || https://competitiveedgedumpsters.com/success",
+    success_url: "http://localhost:3000/success",
+    cancel_url: "http://localhost:3000/cancel",
   });
 
   return NextResponse.json(session.url);
