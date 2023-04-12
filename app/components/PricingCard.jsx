@@ -190,11 +190,9 @@ function PricingCard({ price }) {
         },
       }
     );
-    window.open(data);
-    console.log(data)
+    document.open(data);
+    console.log(data);
   };
-
-
 
   return (
     <div className="border-gray-100 shadow-2xl border-4 text-center mt-10 max-w-[1040px]">
