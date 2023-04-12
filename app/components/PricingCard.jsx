@@ -193,6 +193,8 @@ function PricingCard({ price }) {
     window.open(data);
   };
 
+
+
   return (
     <div className="border-gray-100 shadow-2xl border-4 text-center mt-10 max-w-[1040px]">
       <div>
