@@ -191,7 +191,7 @@ function PricingCard({ price }) {
       }
     );
     window.open(data);
-    console.log(data);
+    console.log('data', data);
   };
 
   return (

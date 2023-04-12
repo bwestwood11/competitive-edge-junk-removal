@@ -23,12 +23,11 @@ import Stripe from "stripe";
 //   return NextResponse.json(session.url);
 // }
 
-export async function POST(req) {
-  console.log(req)
+export async function POST(request) {
+  console.log(request)
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   // const { data } = await req.json();
-  let data = await req.json();
-console.log(process.env.STRIPE_SECRET_KEY)
+  let data = await request.json();
   let priceId = data.priceId;
   console.log('priceId', priceId)
   const session = await stripe.checkout.sessions.create({
