@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    stripe_secret_key_test: process.env.STRIPE_SECRET_KEY
+    stripe_secret_key: process.env.STRIPE_SECRET_KEY
   }
 }
 
