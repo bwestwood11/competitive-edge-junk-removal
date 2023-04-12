@@ -190,7 +190,7 @@ function PricingCard({ price }) {
         },
       }
     );
-    document.open(data);
+    window.open(data);
     console.log(data);
   };
 
