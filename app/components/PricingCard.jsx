@@ -191,10 +191,6 @@ function PricingCard({ price }) {
       }
     );
     window.open(data);
-    // console.log(priceId) // tyhis is undefined,
-
-    // could you add me on your discord?
-    // codingstar9311#5452
   };
 
   return (

@@ -24,6 +24,7 @@ import Stripe from "stripe";
 // }
 
 export async function POST(req) {
+  console.log(req)
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   // const { data } = await req.json();
      console.log(stripe)
