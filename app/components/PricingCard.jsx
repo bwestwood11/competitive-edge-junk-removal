@@ -1,5 +1,7 @@
 import { AiFillCheckCircle } from "react-icons/ai";
 import axios from "axios";
+import Link from "next/link";
+
 
 function PricingCard({ price }) {
   const dynamicDescription = (price) => {
@@ -191,8 +193,9 @@ function PricingCard({ price }) {
       }
     );
     window.location.assign(data);
-    console.log('data', data);
+    console.log("data", data);
   };
+
 
   return (
     <div className="border-gray-100 shadow-2xl border-4 text-center mt-10 max-w-[1040px]">
@@ -216,13 +219,15 @@ function PricingCard({ price }) {
             <li className="text-xl font-bold">{dynamicDescription(price)}</li>
           </ul>
           {/* <pre>{JSON.stringify(price, null, 4)}</pre> */}
-          <button
-            onClick={(e) => handleSubscription(e)}
-            className="mt-8 flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            {" "}
-            Rent This Dumpster
-          </button>
+          <Link href='/calendar'>
+            <button
+              // onClick={(e) => handleSubscription(e)}
+              className="mt-8 flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >
+              {" "}
+              Schedule Today
+            </button>
+            </Link>
         </div>
       </div>
     </div>

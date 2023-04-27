@@ -9,8 +9,7 @@ import dumpster4 from "../../public/dumpster4.jpg";
 import pic1 from "../../public/pic1.jpg";
 
 const Hero = () => { 
-  const [zipcode, setZipcode] = useState("")
-
+  const [zipcode, setZipcode] = useState("");
  const handleSubmit = () => {
     alert('Clicked')
  }

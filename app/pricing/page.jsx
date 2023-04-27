@@ -3,22 +3,25 @@
 import Image from "next/image";
 import dumpster3 from "../../public/dumpster3.jpg";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import PricingCard from "../components/PricingCard";
+import { StripeContext } from "../context/StripeContext";
 
 
 export default function Pricing() {
-  const [prices, setPrices] = useState([])
+ const [prices, setPrices] = useContext(StripeContext)
 
-   useEffect(() => {
-       fetchPrices()
-   }, [])
+  // const [prices, setPrices] = useState([])
 
-   const fetchPrices = async () => {
-    const {data} = await axios.get('/api/getproducts')
-    console.log(data)
-    setPrices(data)
-   }
+  //  useEffect(() => {
+  //      fetchPrices()
+  //  }, [])
+
+  //  const fetchPrices = async () => {
+  //   const {data} = await axios.get('/api/getproducts')
+  //   console.log(data)
+  //   setPrices(data)
+  //  }
 
 
   return (

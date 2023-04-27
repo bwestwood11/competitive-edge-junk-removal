@@ -5,34 +5,44 @@ import {AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai';
 
 const faqs = [
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What Are My Payment Options?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "Competitive Edge accepts all major credit cards or in-person payment as well.",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "How Do I Contact Customer Service?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "You can reach us by emailing brianwestwood13@gmail.com or calling (813) 507-5503",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What Does My Dumpster Rental Price Include?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "The price of your dumpster rental includes: one-time delivery and one-time pickup, a specified amount of days of rental, the fuel, environmental fees, and taxes associated with the dumpster size and days ordered.",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "How Do I Change or Cancel My Dumpster Rental?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "You may update your reservation by calling us directly at (813) 507-5503. Any changes to rentals must be made 24 hours prior to the scheduled delivery of the dumpster. This is to avoid a trip charge which can be up to $150.",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "Do I Have To Be Present During Delivery or Pick Up?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "No you don't have to. Just please be sure to give any special instructions on your order form during checkout. If there are no special instructions, the driver will use his.her best judgement and experience.",
   },
   {
-    question: "What's the best thing about Switzerland?",
+    question: "What If The Driver Cannot Access Dumpster to Pickup?",
     answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      "If the driver is unable to access the dumpster for any reason (customer's fault or not), the renter will be billed a trip charge ($150). If a missed pickup causes a dumpster to be at the property for longer than contracted time, the renter will also be billed per day until the dumpster is picked up.",
+  },
+  {
+    question: "What If I Put Prohibited/Hazardous Material in my Dumpster?",
+    answer:
+      "We will charge the credit card on file 4 times the amount of the fee we get charged for any and all hazardous materials in the dumpster as well as a $250 container cleaning fee.",
+  },
+  {
+    question: "How Do I Know if a Product is Hazardous?",
+    answer:
+      "Assume a product is hazardous if the label contains ANY of the following words: pesticide, fertilizer, warning, poison, acid, danger, caustic, flammable. If you are unsure, give us a call at (813) 507-5503",
   },
   // More questions...
 ]
