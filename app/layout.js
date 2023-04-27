@@ -8,10 +8,10 @@ import { LocalizationProvider } from "@mui/x-date-pickers-pro";
 import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs';
 import { StripeProvider } from './context/StripeContext'
 
-export const metadata = {
-  title: 'Competitive Edge Junk Removal',
-  description: 'Tampa Bays Best Junk Removal & Dumpster Rental Company.',
-}
+// export const metadata = {
+//   title: 'Competitive Edge Junk Removal',
+//   description: 'Tampa Bays Best Junk Removal & Dumpster Rental Company.',
+// }
 
 export default function RootLayout({ children }) {
   return (
