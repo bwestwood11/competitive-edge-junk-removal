@@ -9,17 +9,28 @@ import { DateCalendar, MultiInputTimeRangeField } from "@mui/x-date-pickers-pro"
 import { SingleInputTimeRangeField } from "@mui/x-date-pickers-pro";
 import dayjs from "dayjs";
 import axios from 'axios';
+import { useRouter } from "next/navigation";
 
 
 
 export default function Calendar({price}) {
+  const router = useRouter()
   const [open, setOpen] = useState(true);
   const [selectedDate, setSelectedDate] = useState(null);
   const [name, setName] = useState('');
+  const [value, setValue] = useState([dayjs().hour(9).minute(30), dayjs().hour(13).minute(30)]);
 
   const handleDateChange = (newDate) => {
     setSelectedDate(newDate)
   }
+
+const createUser = async () => {
+ fetch('/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name, selectedDate, value })
+ })
+}
 
 
   return (
@@ -88,19 +99,22 @@ export default function Calendar({price}) {
                       <h2 className="font-bold mb-2">Give Us a 4-Hour Time Frame</h2>
                       <p className="mb-4">Example: 09:30 AM - 01:30 PM</p>
                     </div>
-                    <SingleInputTimeRangeField/>
+                    <SingleInputTimeRangeField
+  label="Controlled field"
+  value={value}
+  onChange={(newValue) => setValue(newValue)}
+/>
                   </div>
                   
                 </div>
-                <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-                  <Link href="/confirmdumpster">
+                <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">  
                     <button
+                    onClick={createUser}
                       type="button"
                       className="inline-flex w-full justify-center rounded-md bg-[#f1592a] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
                     >
                       Next
                     </button>
-                  </Link>
                 </div>
               </Dialog.Panel>
             </Transition.Child>

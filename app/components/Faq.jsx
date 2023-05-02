@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "How Do I Contact Customer Service?",
     answer:
-      "You can reach us by emailing brianwestwood13@gmail.com or calling (813) 507-5503",
+      "You can reach us by emailing brianwestwood13@gmail.com or calling (813) 200-8791",
   },
   {
     question: "What Does My Dumpster Rental Price Include?",
@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "How Do I Change or Cancel My Dumpster Rental?",
     answer:
-      "You may update your reservation by calling us directly at (813) 507-5503. Any changes to rentals must be made 24 hours prior to the scheduled delivery of the dumpster. This is to avoid a trip charge which can be up to $150.",
+      "You may update your reservation by calling us directly at (813) 200-8791. Any changes to rentals must be made 24 hours prior to the scheduled delivery of the dumpster. This is to avoid a trip charge which can be up to $150.",
   },
   {
     question: "Do I Have To Be Present During Delivery or Pick Up?",

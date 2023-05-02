@@ -21,15 +21,15 @@ export default function Stats() {
                 <dl className="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
                   <div className="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
                     <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Customer Satisfaction</dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-[#f1592a]">100%</dd>
+                    <dd className="order-1 text-4xl font-bold tracking-tight text-[#f1592a]">100%</dd>
                   </div>
                   <div className="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
                     <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Rentals</dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-[#f1592a]">1,000 +</dd>
+                    <dd className="order-1 text-4xl font-bold tracking-tight text-[#f1592a]">1,000 +</dd>
                   </div>
                   <div className="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
                     <dt className="order-2 mt-2 text-lg font-medium leading-6 text-gray-500">Recycled</dt>
-                    <dd className="order-1 text-5xl font-bold tracking-tight text-[#f1592a]">5,000 lbs +  </dd>
+                    <dd className="order-1 text-4xl font-bold tracking-tight text-[#f1592a]">500,000 lbs +  </dd>
                   </div>
                 </dl>
               </div>
