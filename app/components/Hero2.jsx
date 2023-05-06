@@ -3,7 +3,7 @@ import image1 from '../../public/image1.jpg';
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-function Hero2() {
+const Hero2 = () => {
   const [showModal, setShowModal] = useState(false);
 const router = useRouter();
   const toggleModal = () => {
