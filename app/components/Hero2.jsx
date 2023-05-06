@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import image1 from '../../public/image1.jpg'
-
+import heroImage from '../../public/heroImage.jpg'
 import { useRouter } from "next/navigation";
 
 const Hero2 = () => {
@@ -24,7 +23,7 @@ const router = useRouter();
       <div className="absolute top-0 left-0 w-full h-[80vh] sm:h-[50vh] xl:h-[75vh] bg-gradient-to-t from-black to-transparent z-10" />
        <Image
           className="absolute inset-0 z-1"
-          src={image1}
+          src={heroImage}
           alt="/"
           layout="fill"
           objectFit="cover"
