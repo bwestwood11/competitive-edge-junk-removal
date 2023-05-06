@@ -53,22 +53,22 @@ const Navbar = () => {
         <div className="hidden sm:flex">
           <ul className="hidden sm:flex gap-8">
             <Link href="/pricing">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
                 Prices & Sizes
               </li>
             </Link>
             <Link href="/pricing">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
                 How it Works
               </li>
             </Link>
             <Link href="/contact">
-              <li className="ml-10 uppercase font-semibold hover:text-[#f1592a] text-xl">
+              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
                 Contact Us
               </li>
             </Link>
             <Link href="/about">
-              <li className="mx-10 uppercase font-semibold hover:text-[#f1592a] text-xl ">
+              <li className="mx-10 uppercase font-bold hover:text-[#f1592a] text-xl ">
                 About Us
               </li>
             </Link>

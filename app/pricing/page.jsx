@@ -6,7 +6,7 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import PricingCard from "../components/PricingCard";
 import { StripeContext } from "../context/StripeContext";
-
+import image2 from "../../public/image2.jpg";
 
 export default function Pricing() {
  const [prices, setPrices] = useContext(StripeContext)
@@ -30,7 +30,7 @@ export default function Pricing() {
         <div className="absolute top-0 left-0 w-full h-[60vh] bg-gradient-to-t from-black to-transparent z-10" />
         <Image
           className="absolute inset-0 z-1"
-          src={dumpster3}
+          src={image2}
           alt="/"
           layout="fill"
           objectFit="cover"

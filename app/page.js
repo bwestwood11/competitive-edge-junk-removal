@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div>
-      <Hero />
+      <Hero2 />
       <Stats />
       <Services />
     <Faq />

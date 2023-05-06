@@ -79,7 +79,7 @@ const createUser = async () => {
                     />
                   </div>
                   </Link>
-                  <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                  <div className="mt-3 text-center item-center mx-auto sm:ml-4 sm:mt-0 sm:text-left">
                     <Dialog.Title
                       as="h3"
                       className="text-base font-semibold leading-6 text-gray-900"
@@ -95,14 +95,13 @@ const createUser = async () => {
                     
                     </div>
                     <DateCalendar disablePast value={selectedDate} onChange={handleDateChange}/>
-                    <div>
-                      <h2 className="font-bold mb-2">Give Us a 4-Hour Time Frame</h2>
-                      <p className="mb-4">Example: 09:30 AM - 01:30 PM</p>
+                    <div className="text-center ">
+                      <h2 className="font-bold mb-4">Give Us a 4-Hour Time Frame</h2>
                     </div>
                     <SingleInputTimeRangeField
-  label="Controlled field"
+  label="Time Range"
   value={value}
-  onChange={(newValue) => setValue(newValue)}
+  onChange={(newValue) => setValue(dayjs(newValue).format('HH:mm A'))}
 />
                   </div>
                   
