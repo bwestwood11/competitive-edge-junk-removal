@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import image1 from '../../public/image1.jpg';
+import image1 from '../../public/image1.jpg'
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
