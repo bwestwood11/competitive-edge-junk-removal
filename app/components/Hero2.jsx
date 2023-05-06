@@ -27,7 +27,7 @@ const router = useRouter();
           alt="/"
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
+          objectPosition="0px -80px"
           priority
         />
       {/* Modal */}
