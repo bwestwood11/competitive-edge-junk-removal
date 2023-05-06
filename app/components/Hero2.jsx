@@ -1,8 +1,9 @@
 'use client'
 
+import Image from "next/image";
 import React, { useState } from "react";
 import image1 from '../../public/image1.jpg'
-import Image from "next/image";
+
 import { useRouter } from "next/navigation";
 
 const Hero2 = () => {
@@ -18,15 +19,16 @@ const router = useRouter();
 
   return (
     <div
-      className="relative bg-cover bg-center w-screen h-[80vh] flex justify-center items-center"
+      className="relative bg-cover bg-center w-screen h-[80vh] sm:h-[50vh] xl:h-[75vh] flex justify-center items-center"
     >
-      <div className="absolute top-0 left-0 w-full h-[80vh] bg-gradient-to-t from-black to-transparent z-10" />
+      <div className="absolute top-0 left-0 w-full h-[80vh] sm:h-[50vh] xl:h-[75vh] bg-gradient-to-t from-black to-transparent z-10" />
        <Image
           className="absolute inset-0 z-1"
           src={image1}
           alt="/"
           layout="fill"
           objectFit="cover"
+          objectPosition="center"
           priority
         />
       {/* Modal */}
@@ -55,8 +57,8 @@ const router = useRouter();
 
       {/* Box */}
       <div className="absolute sm:right-40 bottom-10 z-10">
-        <div className="bg-white stroke-black stroke-2 p-4 rounded-lg shadow-lg max-w-[360px]">
-          <h1 className="text-5xl font-bold mb-4">Rent A Dumpster Today</h1>
+        <div className="bg-white stroke-black stroke-2 p-4 rounded-lg shadow-lg max-w-[360px] sm:max-w-[400px] xl:max-w-[600px]">
+          <h1 className="text-4xl font-bold mb-4">Rent A Dumpster Today</h1>
           <p className="text-gray-700 mb-4">
             Rent a roll-off dumpster for your home, business, or project. Click the button below to get started today!!
           </p>
