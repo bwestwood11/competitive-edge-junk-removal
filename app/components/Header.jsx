@@ -19,8 +19,8 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={shadow ? 'fixed bg-[#f1592a] h-10 w-full flex items-center justify-center text-center py-6 px-6 z-[100]': 'bg-[#f1592a] h-10 w-full flex items-center justify-center text-center py-6 px-6'}>
-        <h1 className='text-white font-semibold'><Link href='/pricing'><span className='underline cursor-pointer'>Weekend Deal</span></Link> Friday - Monday $289 10-yd dumpster - 2,000 lbs included</h1>
+    <div className={shadow ? 'fixed bg-[#f1592a] h-4 w-full flex items-center justify-center text-center py-4 px-4 z-[100]': 'bg-[#f1592a] h-4 w-full flex items-center justify-center text-center py-4 px-4'}>
+        <h1 className='text-white font-semibold'><span className='underline cursor-pointer'> Click Here</span> for Weekend Special<Link href='/pricing'></Link></h1>
         </div>
   )
 }

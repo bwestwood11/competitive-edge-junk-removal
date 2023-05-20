@@ -1,12 +1,11 @@
 'use client'
 
 import Image from "next/image";
-import dumpster3 from "../../public/dumpster3.jpg";
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
-import PricingCard from "../components/PricingCard";
-import { StripeContext } from "../context/StripeContext";
-import pricingImage from '../../public/pricingImage.jpg';
+import PricingCard from "../../components/PricingCard";
+import { StripeContext } from "../../context/StripeContext";
+import pricingImage from '/public/pricingImage.jpg';
 
 export default function Pricing() {
  const [prices, setPrices] = useContext(StripeContext)

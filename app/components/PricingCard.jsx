@@ -1,9 +1,13 @@
 import { AiFillCheckCircle } from "react-icons/ai";
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 
 
 function PricingCard({ price }) {
+ const router = useRouter();
+ console.log(price)
   const dynamicDescription = (price) => {
     if (price.nickname === "20-Yard Dumpster") {
       return (
@@ -62,7 +66,7 @@ function PricingCard({ price }) {
               className="h-5 w-5 flex-shrink-0 text-green-500 ml-2"
               aria-hidden="true"
             />
-            <p className="text-sm text-gray-500">Neighborhood & HOA Friendly</p>
+            <h2 className="text-sm text-gray-500">Neighborhood & HOA Friendly</h2>
           </div>
           <div className="border" />
           <div className="flex space-x-3">
@@ -158,7 +162,7 @@ function PricingCard({ price }) {
               className="h-5 w-5 flex-shrink-0 text-green-500 ml-2"
               aria-hidden="true"
             />
-            <p className="text-sm text-gray-500">Driveway Protection</p>
+            <h2 className="text-sm text-gray-500">Driveway Protection</h2>
           </div>
           <div className="border" />
         </div>
@@ -168,13 +172,13 @@ function PricingCard({ price }) {
 
   const dynamicSubTitle = (price) => {
     if (price.nickname === "20-Yard Dumpster") {
-      return <p className="text-[#f1592a] mt-1">3-day rental</p>;
+      return (<div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>);
     } else if (price.nickname === "15-Yard Dumpster") {
-      return <p className="text-[#f1592a] mt-1">3-day rental</p>;
+      return (<div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>);
     } else if (price.nickname === "10-Yard Dumpster") {
-      return <p className="text-[#f1592a] mt-1">Weekend Special</p>;
+      return (<div><h2 className="text-[#f1592a] mt-1">Weekend Special</h2></div>);
     } else if (price.nickname === "24-Hour Special: 15-Yard Dumpster") {
-      return <p className="text-[#f1592a] mt-1">3-day rental</p>;
+      return <div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>;
     }
   };
 
@@ -196,6 +200,13 @@ function PricingCard({ price }) {
     console.log("data", data);
   };
 
+  // const handleCalendar = (e) => {
+  //     e.preventDefault();
+  //     router.push({
+  //         pathname: '/calendar',
+  //         query: { price: price.id },
+  //     })
+  // }
 
   return (
     <div className="border-gray-100 shadow-2xl border-4 text-center mt-10 max-w-[1040px]">
@@ -218,16 +229,19 @@ function PricingCard({ price }) {
           <ul className="flex justify-center">
             <li className="text-xl font-bold">{dynamicDescription(price)}</li>
           </ul>
-          {/* <pre>{JSON.stringify(price, null, 4)}</pre> */}
-          <Link href='/calendar'>
+          {/* <Link href="/calendar"> */}
+          <Link href={{
+            pathname: '/calendar',
+            query: {price: price.id }
+          }} >
             <button
-              // onClick={(e) => handleSubscription(e)}
               className="mt-8 flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
             >
               {" "}
               Schedule Today
             </button>
             </Link>
+            {/* </Link> */}
         </div>
       </div>
     </div>
