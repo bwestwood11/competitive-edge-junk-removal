@@ -22,10 +22,10 @@ export default function Calendar() {
   console.log(price);
 
   const [open, setOpen] = useState(true);
-const [ firstName, setFirstName ] = useState("")
-const [ lastName, setLastName ] = useState("")
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState(""); 
+  const [phone, setPhone] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
   const [value, setValue] = useState([
     dayjs().hour(9).minute(30),
@@ -40,25 +40,15 @@ const [ lastName, setLastName ] = useState("")
     fetch("/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ selectedDate, value, firstName, lastName, email, phone }),
+      body: JSON.stringify({
+        selectedDate,
+        value,
+        firstName,
+        lastName,
+        email,
+        phone,
+      }),
     });
-  };
-
-  const handleSubscription = async (e) => {
-    e.preventDefault();
-    const { data } = await axios.post(
-      "/api/payment",
-      {
-        priceId: price,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    window.location.assign(data);
-    console.log("data", data);
   };
 
   return (
@@ -119,30 +109,50 @@ const [ lastName, setLastName ] = useState("")
                       placeholder="     First Name"
                       required
                       value={firstName}
-                     onChange={(e) => setFirstName(e.target.value)}
+                      onChange={(e) => setFirstName(e.target.value)}
                       className="rounded-lg mt-4 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
                     />
                     <input
                       type="text"
                       placeholder="Last Name"
                       required
-                   value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
                       className="rounded-lg mt-4 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
                     />
                   </div>
                   <div className="flex flex-col mt-4 relative gap-4 mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 absolute top-2 left-2" >
-  <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-  <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-</svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-5 h-5 absolute top-2 left-2"
+                    >
+                      <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                      <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
 
-                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1" />
-                    <input type="text" placeholder="Business Name (Optional)" className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1" />
-                    <input type="tel" placeholder="Contact Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1" />
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Business Name (Optional)"
+                      className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Contact Phone Number"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1"
+                    />
                   </div>
                 </div>
-
 
                 {/* Calendar Starts Here */}
                 <div className="sm:flex">
