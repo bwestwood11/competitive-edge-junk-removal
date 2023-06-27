@@ -18,4 +18,6 @@ model User {
    lastName String
    email String
    phone String
+   stripeId String
 }
+
