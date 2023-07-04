@@ -15,8 +15,7 @@ export async function POST(request) {
           email: email
         },
         data: {
-          dumpster: if(priceId == 'price_1MukObIPblDJirEcC4TRFg58') { return '15-yard dumpster' } else if(priceId == 'price_1Mul3uIPblDJirEcXeqkl5lf') { return '20-yard dumpster' } else if(priceId == 'price_1MurH4IPblDJirEcJgf7h4QN') { return '10-yard dumpster' } else if(priceId == 'price_1MurISIPblDJirEcKEMeUoeG') { return '15-yard dumpster 24 hour special' } else { return '15-yard dumpster' 
-        } 
+          dumpster: if(priceId == 'price_1MukObIPblDJirEcC4TRFg58') { return '15-yard dumpster' } else if(priceId == 'price_1Mul3uIPblDJirEcXeqkl5lf') { return '20-yard dumpster' } else if(priceId == 'price_1MurH4IPblDJirEcJgf7h4QN') { return '10-yard dumpster' } else if(priceId == 'price_1MurISIPblDJirEcKEMeUoeG') { return '15-yard dumpster 24 hour special' } else { return '15-yard dumpster'} 
         }
       })
 
