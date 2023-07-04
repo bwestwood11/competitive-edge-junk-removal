@@ -10,14 +10,14 @@ export async function POST(request) {
 
     console.log('update the user here email', data);
 
-    const updateUser = await prisma.user.update({
-        where: {
-          email: email
-        },
-        data: {
-          dumpster: if(priceId == 'price_1MukObIPblDJirEcC4TRFg58') { return '15-yard dumpster' } else if(priceId == 'price_1Mul3uIPblDJirEcXeqkl5lf') { return '20-yard dumpster' } else if(priceId == 'price_1MurH4IPblDJirEcJgf7h4QN') { return '10-yard dumpster' } else if(priceId == 'price_1MurISIPblDJirEcKEMeUoeG') { return '15-yard dumpster 24 hour special' } else { return '15-yard dumpster'} 
-        }
-      })
+    // const updateUser = await prisma.user.update({
+    //     where: {
+    //       email: email
+    //     },
+    //     data: {
+    //       dumpster: if(priceId == 'price_1MukObIPblDJirEcC4TRFg58') { return '15-yard dumpster' } else if(priceId == 'price_1Mul3uIPblDJirEcXeqkl5lf') { return '20-yard dumpster' } else if(priceId == 'price_1MurH4IPblDJirEcJgf7h4QN') { return '10-yard dumpster' } else if(priceId == 'price_1MurISIPblDJirEcKEMeUoeG') { return '15-yard dumpster 24 hour special' } else { return '15-yard dumpster'} 
+    //     }
+    //   })
 
       return NextResponse.json({"message": "success"})
 }
