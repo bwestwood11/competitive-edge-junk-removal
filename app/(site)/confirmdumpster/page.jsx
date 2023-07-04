@@ -1,21 +1,25 @@
-'use client'
+"use client";
 
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import axios from "axios";
-import { RotatingLines } from "react-loader-spinner"
+import { RotatingLines } from "react-loader-spinner";
 
 export default function page() {
-     const searchParams = useSearchParams();
-      const price = searchParams.get('price');
-      console.log('confirm price', price)
+  const searchParams = useSearchParams();
+  const price = searchParams.get("price");
+  const stripeId = searchParams.get("stripeId");
+  const email = searchParams.get("email");
+  console.log("confirm price", price);
+  console.log("confirm stripeId", stripeId);
 
-
- const handleSubscription = async () => {
+  const handleSubscription = async () => {
     const { data } = await axios.post(
       "/api/payment",
       {
         priceId: price,
+        stripeId: stripeId,
+        email: email,
       },
       {
         headers: {
@@ -27,22 +31,19 @@ export default function page() {
     console.log("data", data);
   };
 
-
-   useEffect(() => {
-    handleSubscription()
-   }, [])
-
-  
+  useEffect(() => {
+    handleSubscription();
+  }, []);
 
   return (
-    <div className='flex justify-center align-middle h-screen'>
-    <RotatingLines
-strokeColor="grey"
-strokeWidth="5"
-animationDuration="0.75"
-width="96"
-visible={true}
-/>
-</div>
-  )
+    <div className="flex justify-center align-middle h-screen">
+      <RotatingLines
+        strokeColor="grey"
+        strokeWidth="5"
+        animationDuration="0.75"
+        width="96"
+        visible={true}
+      />
+    </div>
+  );
 }

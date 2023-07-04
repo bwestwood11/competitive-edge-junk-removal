@@ -13,9 +13,11 @@ import { SingleInputTimeRangeField } from "@mui/x-date-pickers-pro";
 import dayjs from "dayjs";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function Calendar() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const price = searchParams.get("price");
 
   console.log("real price", searchParams.get("price"));
@@ -26,6 +28,7 @@ export default function Calendar() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
   const [value, setValue] = useState([
     dayjs().hour(9).minute(30),
@@ -37,18 +40,38 @@ export default function Calendar() {
   };
 
   const createUser = async (e) => {
-    fetch("/api/users", {
+    const options = {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      timeZone: "America/New_York",
+    };
+
+    const timeoptions = {
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+      hour12: true,
+      timeZone: "America/New_York",
+    }
+
+    const response = await fetch("/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        selectedDate,
-        value,
+        selectedDate: new Intl.DateTimeFormat("en-US", options).format(selectedDate),
+        value: new Intl.DateTimeFormat("en-US", timeoptions).format(value[0]) + " - " + new Intl.DateTimeFormat("en-US", timeoptions).format(value[1]),
         firstName,
         lastName,
         email,
+        address,
         phone,
       }),
     });
+
+    const data = await response.json();
+    console.log("information needed", data.stripeId);
+    router.push(`/confirmdumpster?price=${price}&stripeId=${data.stripeId}&email=${email}`);
   };
 
   return (
@@ -110,7 +133,7 @@ export default function Calendar() {
                       required
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      className="rounded-lg mt-4 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
+                      className="rounded-lg mt-4 w-1/2 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
                     />
                     <input
                       type="text"
@@ -118,7 +141,7 @@ export default function Calendar() {
                       required
                       value={lastName}
                       onChange={(e) => setLastName(e.target.value)}
-                      className="rounded-lg mt-4 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
+                      className="rounded-lg w-1/2 mt-4 text-center placeholder:text-left text-gray-500 font-semibold border-gray-500 py-1"
                     />
                   </div>
                   <div className="flex flex-col mt-4 relative gap-4 mb-4">
@@ -141,8 +164,10 @@ export default function Calendar() {
                     />
                     <input
                       type="text"
-                      placeholder="Business Name (Optional)"
+                      placeholder="Address for Delivery"
                       className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
                     />
                     <input
                       type="text"
@@ -190,17 +215,19 @@ export default function Calendar() {
                     <SingleInputTimeRangeField
                       label="Time Range"
                       value={value}
-                      onChange={(value) => setValue(dayjs().format("HH:mm A"))}
+                      onChange={(newValue) =>
+                        setValue(dayjs(newValue).format("h:s A"))
+                      }
                     />
                   </div>
                 </div>
                 <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
-                  <Link
+                  {/* <Link
                     href={{
                       pathname: "/confirmdumpster",
-                      query: { price: price },
+                      query: { price: price, stripeId: stripeId },
                     }}
-                  >
+                  > */}
                     <button
                       onClick={createUser}
                       type="button"
@@ -208,7 +235,7 @@ export default function Calendar() {
                     >
                       Continue
                     </button>
-                  </Link>
+                  {/* </Link> */}
                 </div>
               </Dialog.Panel>
             </Transition.Child>

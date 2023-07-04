@@ -3,7 +3,7 @@
 import { useState, useEffect, createContext } from "react";
 import axios from "axios";
 
-const  StripeContext = createContext();
+const StripeContext = createContext();
 
 const StripeProvider = ({children}) => {
     const [prices, setPrices] = useState([]);

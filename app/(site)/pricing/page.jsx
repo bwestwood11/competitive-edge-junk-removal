@@ -10,18 +10,6 @@ import pricingImage from '/public/pricingImage.jpg';
 export default function Pricing() {
  const [prices, setPrices] = useContext(StripeContext)
 
-  // const [prices, setPrices] = useState([])
-
-  //  useEffect(() => {
-  //      fetchPrices()
-  //  }, [])
-
-  //  const fetchPrices = async () => {
-  //   const {data} = await axios.get('/api/getproducts')
-  //   console.log(data)
-  //   setPrices(data)
-  //  }
-
 
   return (
     <section className="w-full">

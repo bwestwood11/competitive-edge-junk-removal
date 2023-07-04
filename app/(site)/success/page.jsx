@@ -1,12 +1,34 @@
 'use client'
 
-import { Fragment, useState } from 'react'
+import { Fragment, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { AiFillCheckCircle } from "react-icons/ai";
 import Link from 'next/link';
+import { useSearchParams } from "next/navigation";
 
 export default function Success() {
   const [open, setOpen] = useState(true)
+  const searchParams = useSearchParams();
+  const email = searchParams.get("email");
+  const priceId = searchParams.get("priceId");
+  console.log('email', email)
+
+
+  useEffect(() => {
+    const updateUser = async () => {
+     const {data} = await fetch('/api/success', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          priceId
+        })
+
+       })
+      }
+
+      updateUser()
+  },[])
 
   return (
     <Transition.Root show={open} as={Fragment}>
