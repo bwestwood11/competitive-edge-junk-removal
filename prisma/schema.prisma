@@ -13,12 +13,13 @@ datasource db {
 model User {
    id String @id @default(auto()) @map("_id") @db.ObjectId
    selectedDate String
-   value String[]
+   time String[]
    firstName String
    lastName String
    email String @unique
    address String?
    phone String
+   notes String?
    stripeId String
    dumpster String?
 }

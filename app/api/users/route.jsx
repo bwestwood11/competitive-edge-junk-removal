@@ -5,7 +5,7 @@ import Stripe from "stripe";
 const prisma = new PrismaClient();
 
 export async function POST(request) {
-  const { selectedDate, value, firstName, address, lastName, email, phone } =
+  const { selectedDate, time, firstName, address, lastName, email, phone, notes } =
     await request.json();
 
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -18,12 +18,13 @@ export async function POST(request) {
   const user = await prisma.user.create({
     data: {
       selectedDate,
-      value,
+      time,
       firstName,
       lastName,
       email,
       address,
       phone,
+      notes,
       stripeId: customer.id,
     },
   });

@@ -29,6 +29,7 @@ export default function page() {
     );
     window.location.assign(data);
     console.log("data", data);
+
   };
 
   useEffect(() => {

@@ -50,25 +50,25 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="hidden sm:flex">
-          <ul className="hidden sm:flex gap-8">
+        <div className="hidden md:flex">
+          <ul className="hidden sm:flex md:gap-4 md:text-sm lg:gap-8 xl:text-xl sm:text-xs whitespace-nowrap items-center">
             <Link href="/pricing">
-              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
+              <li className="font-semibold hover:text-[#f1592a]">
                 Prices & Sizes
               </li>
             </Link>
             <Link href="/pricing">
-              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
+              <li className="font-semibold hover:text-[#f1592a]">
                 How it Works
               </li>
             </Link>
             <Link href="/contact">
-              <li className="ml-10 uppercase font-bold hover:text-[#f1592a] text-xl">
+              <li className="font-semibold hover:text-[#f1592a]">
                 Contact Us
               </li>
             </Link>
             <Link href="/about">
-              <li className="mx-10 uppercase font-bold hover:text-[#f1592a] text-xl ">
+              <li className="font-semibold hover:text-[#f1592a]">
                 About Us
               </li>
             </Link>
@@ -76,19 +76,19 @@ const Navbar = () => {
         </div>
         <div>
           <Link href="/pricing">
-            <button className="hidden sm:flex className='mt-8 w-full justify-center rounded-md border border-transparent bg-[#f1592a] py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'">
+            <button className="hidden md:flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
               Rent a Dumpster
             </button>
           </Link>
         </div>
-        <div onClick={handleNav} className="sm:hidden cursor-pointer pl-24">
+        <div onClick={handleNav} className="md:hidden cursor-pointer pl-24">
           <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
         className={
           menuOpen
-            ? "fixed left-0 top-0 w-[100%] sm:hidden h-screen bg-white p-10 ease-in duration-500 z-[1000]"
+            ? "fixed left-0 top-0 sm:w-[70%] w-[100%] md:hidden h-screen bg-white p-10 ease-in duration-500 z-[1000]"
             : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
         }
       >
@@ -107,7 +107,7 @@ const Navbar = () => {
                 Home
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/pricing">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"

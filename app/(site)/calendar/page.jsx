@@ -29,8 +29,9 @@ export default function Calendar() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [notes, setNotes] = useState("");
   const [selectedDate, setSelectedDate] = useState(null);
-  const [value, setValue] = useState([
+  const [time, setTime] = useState([
     dayjs().hour(9).minute(30),
     dayjs().hour(13).minute(30),
   ]);
@@ -50,7 +51,6 @@ export default function Calendar() {
     const timeoptions = {
       hour: "numeric",
       minute: "numeric",
-      second: "numeric",
       hour12: true,
       timeZone: "America/New_York",
     }
@@ -60,12 +60,13 @@ export default function Calendar() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         selectedDate: new Intl.DateTimeFormat("en-US", options).format(selectedDate),
-        value: new Intl.DateTimeFormat("en-US", timeoptions).format(value[0]) + " - " + new Intl.DateTimeFormat("en-US", timeoptions).format(value[1]),
+        time: new Intl.DateTimeFormat("en-US", timeoptions).format(time[0]) + " - " + new Intl.DateTimeFormat("en-US", timeoptions).format(time[1]),
         firstName,
         lastName,
         email,
         address,
         phone,
+        notes,
       }),
     });
 
@@ -176,6 +177,13 @@ export default function Calendar() {
                       onChange={(e) => setPhone(e.target.value)}
                       className="rounded-lg text-center text-gray-500 font-semibold border-gray-500 py-1"
                     />
+                    <textarea
+                      type="text"
+                      placeholder="Any Special Requests or Concerns?"
+                      value={notes}
+                      onChange={(e) => setNotes(e.target.value)}
+                      className="rounded-lg text-center align-middle text-gray-500 font-semibold border-gray-500 py-1"
+                    />
                   </div>
                 </div>
 
@@ -214,9 +222,9 @@ export default function Calendar() {
                     </div>
                     <SingleInputTimeRangeField
                       label="Time Range"
-                      value={value}
+                      value={time}
                       onChange={(newValue) =>
-                        setValue(dayjs(newValue).format("h:s A"))
+                        setTime(dayjs(newValue).format("h:s A"))
                       }
                     />
                   </div>
@@ -231,7 +239,7 @@ export default function Calendar() {
                     <button
                       onClick={createUser}
                       type="button"
-                      className="inline-flex w-full justify-center rounded-md bg-[#f1592a] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
+                      className="inline-flex w-full justify-center rounded-md bg-[#f1592a] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#f1592a]/70 sm:ml-3 sm:w-auto"
                     >
                       Continue
                     </button>
