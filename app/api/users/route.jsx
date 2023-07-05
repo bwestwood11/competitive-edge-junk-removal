@@ -5,6 +5,7 @@ import Stripe from "stripe";
 const prisma = new PrismaClient();
 
 export async function POST(request) {
+  try {
   const { selectedDate, time, firstName, address, lastName, email, phone, notes } =
     await request.json();
 
@@ -31,5 +32,10 @@ export async function POST(request) {
 
   return NextResponse.json(user, {
     status: 200,
-  });
+  });} catch (error) {
+    console.log("error", error);
+    return NextResponse.json(error, {
+      status: 500,
+    });
+  }
 }
