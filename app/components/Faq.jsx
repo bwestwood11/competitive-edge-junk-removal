@@ -30,7 +30,7 @@ const faqs = [
       "No you don't have to. Just please be sure to give any special instructions on your order form during checkout. If there are no special instructions, the driver will use his.her best judgement and experience.",
   },
   {
-    question: "What If The Driver Cannot Access Dumpster to Pickup?",
+    question: "What If The Drivers Cannot Access Dumpster to Pickup?",
     answer:
       "If the driver is unable to access the dumpster for any reason (customer's fault or not), the renter will be billed a trip charge ($150). If a missed pickup causes a dumpster to be at the property for longer than contracted time, the renter will also be billed per day until the dumpster is picked up.",
   },
