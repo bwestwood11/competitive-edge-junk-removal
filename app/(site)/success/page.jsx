@@ -14,22 +14,6 @@ export default function Success() {
   console.log('email', email)
 
 
-  useEffect(() => {
-    const updateUser = async () => {
-     const {data} = await fetch('/api/success', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          priceId
-        })
-
-       })
-      }
-
-      updateUser()
-  },[])
-
   return (
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>

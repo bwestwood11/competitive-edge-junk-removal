@@ -21,6 +21,7 @@ model User {
    phone String
    notes String?
    stripeId String
+   amount_Paid String?
    dumpster String?
 }
 
