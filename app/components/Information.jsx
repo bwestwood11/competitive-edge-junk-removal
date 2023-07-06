@@ -30,7 +30,7 @@ export default function Information() {
                   <li className="flex gap-x-3">
                     <FaDumpster className="mt-1 h-5 w-5 flex-none text-[#f1592a]" aria-hidden="true" />
                     <span>
-                      <strong className="font-semibold text-gray-900">Dumpster Sizes</strong> Lorem ipsum, dolor sit amet
+                      <strong className="font-semibold text-gray-900">Dumpster Sizes</strong> Lorems ipsum, dolor sit amet
                       consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
                       blanditiis ratione.
                     </span>
