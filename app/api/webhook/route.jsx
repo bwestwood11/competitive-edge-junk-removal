@@ -1,7 +1,7 @@
 import { checkCustomRoutes } from "next/dist/lib/load-custom-routes";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-
+import { headers } from 'next/headers'
 
 
 
@@ -17,7 +17,7 @@ export async function POST(req) {
 
     if (endpointSecret) {
         // Get the signature sent by Stripe
-        const signature = req.headers['stripe-signature'];
+        const signature = req.headers.get('stripe-signature');
         try {
           event = stripe.webhooks.constructEvent(
             body,
