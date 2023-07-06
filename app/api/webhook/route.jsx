@@ -35,20 +35,20 @@ export async function POST(req) {
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSession = event.data.object;
-      console.log(`Checkout for ${checkoutSession.data.object} was successful!`);
+      console.log(checkoutSession.data);
 
            // Find customer in database with Stripe ID
-      const user = await prisma.user.update({
-        where: {
-          stripeId: checkoutSession.data.object.id,
-        },
-        data: {
-          amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.data.object.amount_total),
-          paymentStatus: checkoutSession.data.object.payment_status,
+      // const user = await prisma.user.update({
+      //   where: {
+      //     stripeId: checkoutSession.data.object.id,
+      //   },
+      //   data: {
+      //     amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.data.object.amount_total),
+      //     paymentStatus: checkoutSession.data.object.payment_status,
 
-        }
-      });
-      console.log("user", user)
+      //   }
+      // });
+      // console.log("user", user)
       break;
 
     default:
