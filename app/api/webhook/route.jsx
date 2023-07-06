@@ -1,22 +1,32 @@
 import { checkCustomRoutes } from "next/dist/lib/load-custom-routes";
 import { NextResponse } from "next/server";
+import Stripe from "stripe";
 
 
-const endpointSecret = process.env.endpointSecret
+
+
+
+
 export async function POST(request) {
-    let event = request.json()
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+    const endpointSecret = process.env.endpointSecret
+    console.log(endpointSecret)
+    const body = await req.text()
+
+    let event;
+
     if (endpointSecret) {
         // Get the signature sent by Stripe
         const signature = request.headers['stripe-signature'];
         try {
           event = stripe.webhooks.constructEvent(
-            request.body,
+            body,
             signature,
             endpointSecret
           );
         } catch (err) {
           console.log(`⚠️  Webhook signature verification failed.`, err.message);
-          return response.sendStatus(400);
+          return new Response(`Webhook Error: ${err.message}, { status: 400 }`);
         }
       }
 
@@ -24,7 +34,7 @@ export async function POST(request) {
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSession = event.data.object;
-      console.log(`PaymentIntent for ${paymentIntent.amount} was successful!`);
+      console.log(`Checkout for ${checkoutSession} was successful!`);
       // Then define and call a method to handle the successful payment intent.
       // handlePaymentIntentSucceeded(paymentIntent);
       break;
@@ -35,5 +45,5 @@ export async function POST(request) {
   }
    
 
-    return NextResponse.json('success')
+    return NextResponse.send(null, { status: 200 })
 }
