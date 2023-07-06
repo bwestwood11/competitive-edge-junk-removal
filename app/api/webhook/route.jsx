@@ -9,7 +9,7 @@ import Stripe from "stripe";
 
 export async function POST(request) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
-    const endpointSecret = 'whsec_nittmhofwFfsBWsDaxoAAzhQF262sl5h'
+    const endpointSecret = process.env.endpointSecret
     console.log(endpointSecret)
     const body = await request.text()
 
