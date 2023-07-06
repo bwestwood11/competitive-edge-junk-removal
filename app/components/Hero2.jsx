@@ -37,7 +37,7 @@ const Hero2 = () => {
           ></div>
           <div className="bg-white p-8 rounded-lg shadow-lg z-40">
             <h2 className="text-2xl font-bold mb-4">
-              Start Your Dumpster Rental Today
+              Start Your Dumpster Rental Today!
             </h2>
             <p className="mb-4">
               Check out all of our pricing options and schedule your dumpster
