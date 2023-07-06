@@ -11,7 +11,7 @@ export async function POST(request) {
     const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
     const endpointSecret = 'whsec_nittmhofwFfsBWsDaxoAAzhQF262sl5h'
     console.log(endpointSecret)
-    const body = await req.text()
+    const body = await request.text()
 
     let event;
 
