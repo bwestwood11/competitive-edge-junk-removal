@@ -35,7 +35,7 @@ export async function POST(req) {
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSession = event.data.object;
-      console.log(checkoutSession.data);
+      console.log("checkoutsession =>", checkoutSession);
 
            // Find customer in database with Stripe ID
       // const user = await prisma.user.update({
