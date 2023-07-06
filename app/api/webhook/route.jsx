@@ -37,18 +37,18 @@ export async function POST(req) {
       const checkoutSession = event.data.object;
       console.log("checkoutsession =>", checkoutSession);
 
-           // Find customer in database with Stripe ID
-      // const user = await prisma.user.update({
-      //   where: {
-      //     stripeId: checkoutSession.data.object.id,
-      //   },
-      //   data: {
-      //     amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.data.object.amount_total),
-      //     paymentStatus: checkoutSession.data.object.payment_status,
+           Find customer in database with Stripe ID
+      const user = await prisma.user.update({
+        where: {
+          stripeId: checkoutSession.customer,
+        },
+        data: {
+          amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.amount_total),
+          payment_Status: checkoutSession.payment_status,
 
-      //   }
-      // });
-      // console.log("user", user)
+        }
+      });
+      console.log("user updated", user)
       break;
 
     default:
@@ -57,5 +57,5 @@ export async function POST(req) {
   }
    
 
-    return NextResponse.json('successful', { status: 200 })
+    return NextResponse.json('successful requests to webhook', { status: 200 })
 }
