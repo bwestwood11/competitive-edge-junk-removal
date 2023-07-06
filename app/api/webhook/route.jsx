@@ -1,9 +1,10 @@
 import { checkCustomRoutes } from "next/dist/lib/load-custom-routes";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
+import { PrismaClient } from "@prisma/client";
 
 
-
+const prisma = new PrismaClient();
 
 
 export async function POST(req) {
@@ -34,9 +35,20 @@ export async function POST(req) {
   switch (event.type) {
     case 'checkout.session.completed':
       const checkoutSession = event.data.object;
-      console.log(`Checkout for ${checkoutSession} was successful!`);
-      // Then define and call a method to handle the successful payment intent.
-      // handlePaymentIntentSucceeded(paymentIntent);
+      console.log(`Checkout for ${checkoutSession.data.object} was successful!`);
+
+           // Find customer in database with Stripe ID
+      const user = await prisma.user.update({
+        where: {
+          stripeId: checkoutSession.data.object.id,
+        },
+        data: {
+          amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.data.object.amount_total),
+          paymentStatus: checkoutSession.data.object.payment_status,
+
+        }
+      });
+      console.log("user", user)
       break;
 
     default:

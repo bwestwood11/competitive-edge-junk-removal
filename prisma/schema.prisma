@@ -23,5 +23,6 @@ model User {
    stripeId String
    amount_Paid String?
    dumpster String?
+   payment_Status String?
 }
 
