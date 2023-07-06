@@ -43,7 +43,7 @@ export async function POST(req) {
           stripeId: checkoutSession.customer,
         },
         data: {
-          amount_Paid: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(checkoutSession.amount_total),
+          amount_Paid: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencyDisplay: 'narrowSymbol', minimumFractionDigits: 2}).format(checkoutSession.amount_total / 100),
           payment_Status: checkoutSession.payment_status,
 
         }
