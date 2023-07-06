@@ -37,7 +37,7 @@ export async function POST(req) {
       const checkoutSession = event.data.object;
       console.log("checkoutsession =>", checkoutSession);
 
-           Find customer in database with Stripe ID
+          //  Find customer in database with Stripe ID
       const user = await prisma.user.update({
         where: {
           stripeId: checkoutSession.customer,
