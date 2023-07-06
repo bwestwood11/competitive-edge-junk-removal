@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
 export async function POST(request) {
-  const endpointSecret = "whsec_3Z4hMpsRcgGbnI13WSKFqobvOPawviko";
+  const endpointSecret = process.env.endpointSecret
   console.log("endpointSecret", endpointSecret);
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
   let event = request.json();
