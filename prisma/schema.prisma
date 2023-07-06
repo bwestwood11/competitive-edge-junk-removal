@@ -20,7 +20,7 @@ model User {
    address String?
    phone String
    notes String?
-   stripeId String
+   stripeId String @unique
    amount_Paid String?
    dumpster String?
    payment_Status String?
