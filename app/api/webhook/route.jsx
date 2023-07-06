@@ -13,7 +13,7 @@ export async function POST(req) {
     const headersList = headers()
     console.log(endpointSecret)
     const body = await req.text()
-
+    console.log(body)
     let event;
 
     if (endpointSecret) {
