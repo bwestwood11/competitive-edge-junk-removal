@@ -59,7 +59,7 @@ const Hero2 = () => {
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">Rent A Dumpster Today</h1>
           <p className="text-gray-700 mb-4">
             Rent a roll-off dumpster for your home, business, or project. Click
-            the button below to get started today!!
+            the button below to get started today!
           </p>
           <button
             className="bg-[#f1592a] hover:bg-[#f1592a]/70 text-white font-bold py-2 px-4 rounded"
