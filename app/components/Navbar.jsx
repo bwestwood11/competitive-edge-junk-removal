@@ -51,13 +51,13 @@ const Navbar = () => {
           />
         </Link>
         <div className="hidden md:flex">
-          <ul className="hidden sm:flex md:gap-4 md:text-sm lg:gap-8 xl:text-xl sm:text-xs whitespace-nowrap items-center">
+          <ul className="hidden sm:flex md:gap-4 md:text-sm lg:gap-10 xl:text-xl sm:text-xs whitespace-nowrap items-center">
             <Link href="/pricing">
               <li className="font-semibold hover:text-[#f1592a]">
                 Prices & Sizes
               </li>
             </Link>
-            <Link href="/pricing">
+            <Link href="/howitworks">
               <li className="font-semibold hover:text-[#f1592a]">
                 How it Works
               </li>
@@ -65,11 +65,6 @@ const Navbar = () => {
             <Link href="/contact">
               <li className="font-semibold hover:text-[#f1592a]">
                 Contact Us
-              </li>
-            </Link>
-            <Link href="/about">
-              <li className="font-semibold hover:text-[#f1592a]">
-                About Us
               </li>
             </Link>
           </ul>
@@ -115,20 +110,20 @@ const Navbar = () => {
                 Rent a Dumpster
               </li>
             </Link>
-            <Link href="/about">
-              <li
-                onClick={() => setMenuOpen(false)}
-                className="py-4 cursor-pointer"
-              >
-                About
-              </li>
-            </Link>
             <Link href="/pricing">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"
               >
                 Pricing
+              </li>
+            </Link>
+            <Link href="/howitworks">
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              >
+                How it works
               </li>
             </Link>
             <Link href="/contact">
