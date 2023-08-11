@@ -13,6 +13,13 @@ function classNames(...classes) {
 
 export default function ContactPage() {
   const [agreed, setAgreed] = useState(false)
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
 
   return (
     <div className= "relative px-6 md:px-0 pt-24 sm:pt-32">
@@ -48,6 +55,8 @@ export default function ContactPage() {
                 type="text"
                 name="first-name"
                 id="first-name"
+                value={data.firstName}
+                onChange={(e) => setData({ ...data, firstName: e.target.value })}
                 autoComplete="given-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
               />
@@ -62,6 +71,8 @@ export default function ContactPage() {
                 type="text"
                 name="last-name"
                 id="last-name"
+                value={data.lastName}
+                onChange={(e) => setData({ ...data, lastName: e.target.value })}
                 autoComplete="family-name"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
               />
@@ -76,6 +87,8 @@ export default function ContactPage() {
                 type="email"
                 name="email"
                 id="email"
+                value={data.email}
+                onChange={(e) => setData({ ...data, email: e.target.value })}
                 autoComplete="email"
                 className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
               />
@@ -108,6 +121,8 @@ export default function ContactPage() {
                 type="tel"
                 name="phone-number"
                 id="phone-number"
+                value={data.phoneNumber}
+                onChange={(e) => setData({ ...data, phoneNumber: e.target.value })}
                 autoComplete="tel"
                 className="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-orange-600 sm:text-sm sm:leading-6"
               />
@@ -159,6 +174,7 @@ export default function ContactPage() {
         <div className="mt-10">
           <Link href='/contactformsubmitted'>
           <button
+          disabled={!agreed || !data.name || !data.email || !data.phoneNumber || !data.message}
             type="submit"
             className="block w-full rounded-md bg-[#f1592a] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-600"
           >

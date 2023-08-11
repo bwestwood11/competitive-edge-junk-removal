@@ -11,6 +11,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import logo from "../../public/logo.png";
+import { twMerge } from 'tailwind-merge'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,8 +36,8 @@ const Navbar = () => {
     <nav
       className={
         shadow
-          ? "fixed w-full h-20 shadow-xl z-[100] bg-white"
-          : "w-full h-20 z-[100]"
+          ? "fixed top-0 w-full h-20 shadow-xl z-[100] bg-white"
+          : "w-full h-20 z-[100] border-b"
       }
     >
       <div className="flex justify-around items-center h-full w-full px-4 2xl:px-16">

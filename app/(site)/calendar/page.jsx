@@ -14,6 +14,7 @@ import dayjs from "dayjs";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
+import { toast } from "react-hot-toast";
 
 export default function Calendar() {
   const searchParams = useSearchParams();
@@ -40,6 +41,7 @@ export default function Calendar() {
     setSelectedDate(newDate);
   };
 
+  // Create a user in database with the information they provided using the form and then redirect them to the confirmation page
   const createUser = async (e) => {
     const options = {
       year: "numeric",
@@ -54,6 +56,36 @@ export default function Calendar() {
       hour12: true,
       timeZone: "America/New_York",
     }
+
+    if(!selectedDate ) {
+      toast.error("Please select a date");
+      return;
+    }
+    if(!time ) {
+      toast.error("Please select a time");
+      return;
+    }
+    if(!firstName ) {
+      toast.error("Please enter your first name");
+      return;
+    }
+    if(!lastName ) {
+      toast.error("Please enter your last name");
+      return;
+    }
+    if(!email ) {
+      toast.error("Please enter your email");
+      return;
+    }
+    if(!address ) {
+      toast.error("Please enter your address");
+      return;
+    }
+    if(!phone ) {
+      toast.error("Please enter your phone number");
+      return;
+    }
+    
 
     const response = await fetch("/api/users", {
       method: "POST",

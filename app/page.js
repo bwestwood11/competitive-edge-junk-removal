@@ -9,17 +9,18 @@ import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Stats from "./components/Stats";
 import ServiceAreas from "./components/ServiceAreas";
+import HomeHeroSection from "./components/HomeHeroSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <div>
-      <Hero2 />
-      <Stats />
+      <HomeHeroSection />
+      <Stats /> 
+      <ServiceAreas />
       <Services />
       <Faq />
-      <ServiceAreas />
     </div>
   );
 }

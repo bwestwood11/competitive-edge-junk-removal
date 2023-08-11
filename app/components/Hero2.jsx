@@ -54,7 +54,7 @@ const Hero2 = () => {
       )}
 
       {/* Box */}
-      <div className="absolute sm:right-40 bottom-5 sm:bottom-10 z-10">
+      <div className="absolute sm:right-40 bottom-5 sm:bottom-0 z-10">
         <div className="bg-white stroke-black stroke-2 p-4 rounded-lg shadow-lg max-w-[280px] max-h-[260px] sm:max-w-[400px] xl:max-w-[600px]">
           <h1 className="text-2xl sm:text-4xl font-bold mb-4">Rent A Dumpster Today</h1>
           <p className="text-gray-700 mb-4">

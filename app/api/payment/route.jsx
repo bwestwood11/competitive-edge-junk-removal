@@ -31,14 +31,6 @@ export async function POST(request) {
   console.log("checkout session object", session);
 
   
-  // const user = await prisma.user.update({
-  //   where: {
-  //     email: email,
-  //   },
-  //   data: {
-  //     amount_Paid: new Intl.NumberFormat('en-US', { style: 'decimal', currency: 'USD', currencyDisplay: 'narrowSymbol'}).format(session.amount_total)
-  //   } 
-  // });
 
   return NextResponse.json(session.url);
 }

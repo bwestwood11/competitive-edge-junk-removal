@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import './globals.css'
 import { StripeProvider } from './context/StripeContext'
 import Providers from './context/LocalizationProvider'
+import ToastProvider from './context/ToastProvider'
 
 export const metadata = {
   title: 'Competitive Edge Junk Removal',
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <StripeProvider>
      <Providers>
       <body>
+        <ToastProvider />
         <Header />
         <Navbar />
         {children}

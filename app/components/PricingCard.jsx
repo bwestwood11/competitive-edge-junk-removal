@@ -183,31 +183,6 @@ function PricingCard({ price }) {
     } 
   };
 
-  // const handleSubscription = async (e) => {
-  //   e.preventDefault();
-  //   // console.log(price.id);
-  //   const { data } = await axios.post(
-  //     "/api/payment",
-  //     {
-  //       priceId: price.id,
-  //     },
-  //     {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     }
-  //   );
-  //   window.location.assign(data);
-  //   console.log("data", data);
-  // };
-
-  // const handleCalendar = (e) => {
-  //     e.preventDefault();
-  //     router.push({
-  //         pathname: '/calendar',
-  //         query: { price: price.id },
-  //     })
-  // }
 
   return (
     <div className="border-gray-100 shadow-2xl border-4 text-center mt-10 max-w-[1040px]">
