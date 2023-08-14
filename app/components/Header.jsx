@@ -27,7 +27,7 @@ const Header = () => {
         <AiOutlineMail className='text-white text-xl' /> <p className='text-white hidden sm:flex font-semibold mr-10'>info@competitiveedgedumpsters.com</p>
         </a>
        
-        <h1 className='text-white font-semibold sm:flex hidden'><Link href='/pricing'><span className='underline cursor-pointer'> Click Here</span></Link> for Weekend Special</h1>
+        <h1 className='text-white font-semibold sm:flex hidden'><Link href='/pricing'><span className='underline cursor-pointer'> Click Here</span> {" "}</Link> for Weekend Special</h1>
     <a href='tel:+18132008791' className='flex sm:hidden'>
           <p className='text-white mr-3'>Call Today</p><AiFillPhone className='text-white text-xl flex sm:hidden mr-2' /> <p className='text-white'> (813) 200-8791  </p>
           </a>   
