@@ -18,7 +18,7 @@ export default function Home() {
     <div>
       <HomeHeroSection />
       <Stats /> 
-      <ServiceAreas />
+      <ServiceAreas /> 
       <Services />
       <Faq />
     </div>

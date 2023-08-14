@@ -52,7 +52,7 @@ const Navbar = () => {
           />
         </Link>
         <div className="hidden md:flex">
-          <ul className="hidden sm:flex md:gap-4 md:text-sm lg:gap-10 xl:text-xl sm:text-xs whitespace-nowrap items-center">
+          <ul className="hidden sm:flex md:gap-6 md:text-sm lg:gap-10 xl:text-xl sm:text-xs whitespace-nowrap items-center">
             <Link href="/pricing">
               <li className="font-semibold hover:text-[#f1592a]">
                 Prices & Sizes
@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
             <Link href="/contact">
               <li className="font-semibold hover:text-[#f1592a]">
-                Contact Us
+                Contact
               </li>
             </Link>
           </ul>
