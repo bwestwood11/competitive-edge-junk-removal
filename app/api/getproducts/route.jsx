@@ -1,5 +1,6 @@
 import Stripe from "stripe"
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
 
 export async function GET(request) {
@@ -9,6 +10,7 @@ export async function GET(request) {
         limit: 4,
         active: true,
      });
+     revalidatePath(prices.data.reverse())
 
    return NextResponse.json(prices.data.reverse()) 
 

@@ -12,7 +12,7 @@ export default function Pricing() {
 
 
   return (
-    <section className="w-full">
+    <section className="w-full bg-gray-50">
       <div className="w-screen h-[65vh] relative">
         <div className="absolute top-0 left-0 w-full h-[65vh] bg-gradient-to-t from-black to-transparent z-10" />
         <Image
@@ -55,6 +55,35 @@ export default function Pricing() {
            />
         ))}
       </div>
+      <div className="w-full mt-20 bg-gray-50 grid gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto">
+      <div className="border-2 flex sm:w-full w-3/4 mx-auto border-gray-500 rounded-lg shadow-xl">
+          <Image
+          src={'/10yardwithtext.jpg'}
+          alt="Dumpster Image"
+          width={1000}
+          height={1000}
+          />
+      </div>
+      <div className="border-2 flex sm:w-full w-3/4 mx-auto border-gray-500 rounded-lg shadow-xl">
+          <Image
+          src={'/15yardwithtext.jpg'}
+          alt="Dumpster Image"
+          width={1000}
+          height={1000}
+          />
+      </div>
+    </div>
+    <div className="w-full bg-gray-50 mt-8 grid gap-8 grid-cols-1 max-w-6xl mx-auto">
+       <div className="border-2 flex sm:w-1/2 w-3/4 mx-auto border-gray-500 rounded-lg shadow-xl">
+          <Image
+          src={'/20yardwithtext.jpg'}
+          alt="Dumpster Image"
+          width={600}
+          height={600}
+          />
+      </div>
+    </div>
+   
     </section>
   );
 }

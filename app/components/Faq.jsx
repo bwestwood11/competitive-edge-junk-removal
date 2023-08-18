@@ -20,6 +20,11 @@ const faqs = [
       "The price of your dumpster rental includes: one-time delivery and one-time pickup, a specified amount of days of rental, the fuel, environmental fees, and taxes associated with the dumpster size and days ordered.",
   },
   {
+    question: "How Do We Calculate How Much Junk Was In The Dumpster?",
+    answer:
+      "When we pick up your dumpster, we will weigh it at the nearest landfill. If the weight is over the included weight, we will charge you for the overage. If the weight is under the included weight, you will not be charged for the overage. Your card will be on file and charged for the overage if applicable. If you have any questions about this process, please call us at (813) 200-8791.",
+  },
+  {
     question: "How Do I Change or Cancel My Dumpster Rental?",
     answer:
       "You may update your reservation by calling us directly at (813) 200-8791. Any changes to rentals must be made 24 hours prior to the scheduled delivery of the dumpster. This is to avoid a trip charge which can be up to $150.",
@@ -33,6 +38,11 @@ const faqs = [
     question: "What If The Drivers Cannot Access Dumpster to Pickup?",
     answer:
       "If the driver is unable to access the dumpster for any reason (customer's fault or not), the renter will be billed a trip charge ($150). If a missed pickup causes a dumpster to be at the property for longer than contracted time, the renter will also be billed per day until the dumpster is picked up.",
+  },
+  {
+    question: "Do You Just Offer Dumpster Rentals?",
+    answer:
+      "No, we also offer junk removal services as well. If you are interested in this service, please call us at (813) 200-8791 so we can provide a custom quote with labor.",
   },
   {
     question: "What If I Put Prohibited/Hazardous Material in my Dumpster?",
@@ -49,7 +59,7 @@ const faqs = [
 
 export default function Faq() {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
         <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
           <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
