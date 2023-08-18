@@ -104,7 +104,7 @@ const Hero2 = () => {
                <h3 className="text-xl font-bold">BOOK ONLINE</h3>
               </div>
               <p className="mt-2">
-                Learn how to book online with confidence by reading below.
+                Learn how to book online with confidence by reading below!
               </p>
               <Link href="/pricing">
                <button className="mt-4 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs p-2 sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">Book Now</button>
