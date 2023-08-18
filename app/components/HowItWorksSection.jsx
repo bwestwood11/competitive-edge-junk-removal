@@ -3,7 +3,7 @@ import Link from "next/link"
 const HowItWorksSection = () => {
   return (
     <div className='bg-gray-50 mt-8 w-full'>
-       <div className="max-w-6xl mx-auto mb-10">
+       <div className="max-w-6xl mx-auto mb-10 px-6 sm:px-0">
         <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">2. Book Your Dumpster Online</span>
        <p className="text-left mt-3 leading-8 text-gray-600 mb-3">After deciding which size is best for you. Next, you will go to our <Link href='/pricing'><span className='underline font-bold text-black'>pricing page</span></Link> where we have transparent upfront pricing. (2,000lbs is included, any weight over this threshold will be an extra charge)</p>
        <div>

@@ -3,7 +3,7 @@ import Image from "next/image"
 const DumpsterSizes = () => {
   return (
     <div className="w-full bg-gray-50">
-      <div className="max-w-6xl mx-auto mb-10">
+      <div className="max-w-6xl mx-auto mb-10 px-6 sm:px-0">
         <h2 className="text-left text-3xl font-bold tracking-tight text-gray-900 mb-3">How It Works</h2>
         <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">1. Choose The Right Dumpster</span>
        <p className="text-left mt-3 leading-8 text-gray-600 mb-3">Choose your dumpster size based on your project's needs & goals. Below we have listed all of our dumpster's dimensions so you can make the right choice!</p>
