@@ -10,8 +10,8 @@ export async function GET(request) {
         limit: 4,
         active: true,
      });
-     revalidatePath(prices.data)
+     revalidatePath(prices.data.reverse())
 
-   return NextResponse.json(prices.data) 
+   return NextResponse.json(prices.data.reverse()) 
 
 }
