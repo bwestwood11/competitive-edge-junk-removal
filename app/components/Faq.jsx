@@ -20,7 +20,7 @@ const faqs = [
       "The price of your dumpster rental includes: one-time delivery and one-time pickup, a specified amount of days of rental, the fuel, environmental fees, and taxes associated with the dumpster size and days ordered.",
   },
   {
-    question: "How Do We Calculate How Much Junk Was In The Dumpster?",
+    question: "How Do We Calculate How Much Junk/Debris Was In The Dumpster?",
     answer:
       "When we pick up your dumpster, we will weigh it at the nearest landfill. If the weight is over the included weight, we will charge you for the overage. If the weight is under the included weight, you will not be charged for the overage. Your card will be on file and charged for the overage if applicable. If you have any questions about this process, please call us at (813) 200-8791.",
   },
