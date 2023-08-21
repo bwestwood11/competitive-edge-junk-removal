@@ -40,7 +40,7 @@ const faqs = [
       "If the driver is unable to access the dumpster for any reason (customer's fault or not), the renter will be billed a trip charge ($150). If a missed pickup causes a dumpster to be at the property for longer than contracted time, the renter will also be billed per day until the dumpster is picked up.",
   },
   {
-    question: "Do You Just Offer Dumpster Rentals or More?",
+    question: "Do You Just Offer Dumpster Rentals or More Services?",
     answer:
       "No, we also offer junk removal services as well. If you are interested in this service, please call us at (813) 200-8791 so we can provide a custom quote with labor.",
   },
