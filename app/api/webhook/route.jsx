@@ -2,6 +2,7 @@ import { checkCustomRoutes } from "next/dist/lib/load-custom-routes";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { PrismaClient } from "@prisma/client";
+// import { headers } from 'next/headers'
 
 
 const prisma = new PrismaClient();
@@ -18,6 +19,7 @@ export async function POST(req) {
     if (endpointSecret) {
         // Get the signature sent by Stripe
         const signature = req.headers.get('stripe-signature');
+        // const signature = headers().get('Stripe-Signature');
         console.log("signature", signature)
         try {
           event = stripe.webhooks.constructEvent(

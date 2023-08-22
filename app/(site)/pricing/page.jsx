@@ -8,7 +8,7 @@ import { StripeContext } from "../../context/StripeContext";
 import pricingImage from '/public/pricingImage.jpg';
 
 export default function Pricing() {
- const [prices, setPrices] = useContext(StripeContext)
+ const [prices, setPrices] = useContext(StripeContext);
 
 
   return (
