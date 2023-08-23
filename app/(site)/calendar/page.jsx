@@ -104,7 +104,8 @@ export default function Calendar() {
 
     const data = await response.json();
     console.log("information needed", data.stripeId);
-    router.push(`/confirmdumpster?price=${price}&stripeId=${data.stripeId}&email=${email}`);
+    // router.push(`/confirmdumpster?price=${price}&stripeId=${data.stripeId}&email=${email}`);
+    router.push(`/waiver?price=${price}&stripeId=${data.stripeId}&email=${email}`)
   };
 
   return (

@@ -21,6 +21,8 @@ model User {
    phone String
    notes String?
    stripeId String @unique
+   elecronicSignature String?
+   confirmWaiver Boolean? @default(false)
    amount_Paid String?
    dumpster String?
    payment_Status String?
