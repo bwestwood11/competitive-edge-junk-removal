@@ -33,7 +33,8 @@ const WaiverForm = () => {
     if(!fullName) {
         toast.error("Please enter your full name.");
     }
-
+ 
+    if(isChecked && fullName) {
     const response = await fetch("/api/waiver", {
       method: "POST",
       headers: {
@@ -49,23 +50,24 @@ const WaiverForm = () => {
     router.push(
       `/confirmdumpster?price=${price}&stripeId=${stripeId}&email=${email}`
     );
+  }
   };
 
-
   return (
-    <div className="container mx-auto text-center py-8">
-      <form className="max-w-md mx-auto text-left" onSubmit={handleSubmit}>
-        <div className="flex mt-20 min-h-3/4">
-          <div className="max-w-md p-6 bg-white shadow-lg rounded-lg">
+    <div className="mx-auto text-center bg-gray-50 py-8">
+      <form className="max-w-lg mx-auto text-left" onSubmit={handleSubmit}>
+        <div className="flex mt-4 min-h-3/4">
+          <div className="max-w-lg p-6 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Waiver Form</h2>
             <div className="h-80 overflow-y-auto border border-gray-300 p-4">
               {/* Your waiver content goes here */}
               <p>
                 This Dumpster Damage Waiver Form ("Form") is an agreement
                 between the undersigned client ("Client") and Competitive Edge
-                Dumosters ("Company"). By using the services provided by the
+                Dumpsters ("Company"). By using the services provided by the
                 Company, the Client acknowledges and agrees to the following
-                terms and conditions: Responsibility: The Client agrees to
+                terms and conditions:
+                 Responsibility: The Client agrees to
                 assume full responsibility for any damage caused to the dumpster
                 provided by the Company during the duration of its use. Damage
                 Charges: In the event that the dumpster is damaged while in the
