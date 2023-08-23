@@ -214,9 +214,9 @@ export default function ContactPage() {
                We have been in business since 2018 and have been growing ever since. We are a 
                family owned and operated business that takes pride in our work and our customers.
              </p>
-             <Link href='/contact'>
+             <a href='mailto:brian@competitiveedgedumpsters.com'>
              <button className='mt-4 w-36 text-white font-medium bg-[#f1592a] px-2 py-3 rounded-lg hover:bg-[#f1592a]/70' >Contact Us</button>
-             </Link>
+             </a>
            </div>
            <Image 
            src={aboutImage}

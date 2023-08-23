@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "How Do I Contact Customer Service?",
     answer:
-      "You can reach us by emailing brianwestwood13@gmail.com or calling (813) 200-8791",
+      "You can reach us by emailing brian@competitiveedgedumpsters.com or calling (813) 200-8791",
   },
   {
     question: "What Does My Dumpster Rental Price Include?",

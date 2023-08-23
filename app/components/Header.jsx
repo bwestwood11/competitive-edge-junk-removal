@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <div className={shadow ? 'fixed top-0 bg-[#f1592a] h-4 w-full flex items-center justify-center text-center py-4 px-4 z-[100]': 'bg-[#f1592a] h-4 w-full flex items-center justify-center text-center py-4 px-4'}>
-       <a className='sm:flex flex-row items-center hidden ' href='mailto:brianwestwood13@gmail.com'>
+       <a className='sm:flex flex-row items-center hidden' href='mailto:brian@competitiveedgedumpsters.com'>
         <AiOutlineMail className='text-white text-xl mr-3' /> <p className='text-white hidden sm:flex font-semibold mr-10'>info@competitiveedgedumpsters.com</p>
         </a>
        

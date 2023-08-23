@@ -8,7 +8,7 @@ const DumpsterSizes = () => {
         <span className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">1. Choose The Right Dumpster</span>
        <p className="text-left mt-3 leading-8 text-gray-600 mb-3">Choose your dumpster size based on your project's needs & goals. Below we have listed all of our dumpster's dimensions so you can make the right choice!</p>
        <div>
-          <p className="leading-8 text-gray-600"> If this is your first time renting a dumpster and you don't know exactly what size you need. You can either call us at (813) 200-8791 or email us at brianwestwood13@gmail.com so we can pair you with the right size. </p>
+          <p className="leading-8 text-gray-600"> If this is your first time renting a dumpster and you don't know exactly what size you need. You can either call us at (813) 200-8791 or email us at <a href="mailto:brian@competitiveedgedumpsters.com" className="underline font-bold text-black">brian@competitiveedgedumpsters.com</a> so we can pair you with the right size. </p>
        </div>
       </div>
       
