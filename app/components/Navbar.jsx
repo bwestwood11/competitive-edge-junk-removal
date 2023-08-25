@@ -63,6 +63,11 @@ const Navbar = () => {
                 How it Works
               </li>
             </Link>
+            <Link href="/blog">
+              <li className="font-semibold hover:text-[#f1592a]">
+                Blog
+              </li>
+            </Link>
             <Link href="/contact">
               <li className="font-semibold hover:text-[#f1592a]">
                 Contact
@@ -125,6 +130,14 @@ const Navbar = () => {
                 className="py-4 cursor-pointer"
               >
                 How it works
+              </li>
+            </Link>
+            <Link href="/blog">
+              <li
+                onClick={() => setMenuOpen(false)}
+                className="py-4 cursor-pointer"
+              >
+                Blog
               </li>
             </Link>
             <Link href="/contact">
