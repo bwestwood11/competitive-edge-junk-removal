@@ -7,15 +7,14 @@ import "highlight.js/styles/atom-one-dark.css";
 export const revalidate = 10;
 
 export async function generateStaticParams() {
-    try {
          const posts = await getPostsMeta(); // deduped!
 
-  return posts.map((post) => ({
+         if (!posts) return [];
+
+    return posts.map((post) => ({
     postId: post.id,
   })); 
-    } catch (error) {
-        console.log("Error fetching posts", error)
-    }
+ 
 }
 
 // Dynamic Metadata for each post page
