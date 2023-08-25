@@ -3,6 +3,7 @@ const navigation = {
       { name: 'How it works', href: '/howitworks' },
       { name: 'Contact', href: '/contact' },
       { name: 'Pricing', href: '/pricing' },
+      { name: 'Blog', href: '/blog' },
     ],
     social: [
       {

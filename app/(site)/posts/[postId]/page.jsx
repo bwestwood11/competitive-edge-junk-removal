@@ -37,15 +37,14 @@ export default async function Post({ params: { postId } }) {
   if (!post) notFound();
 
   const { meta, content } = post;
- console.log("meta", meta)
+ 
   const pubDate = getFormattedDate(meta.date);
 
-  const tags = meta.tags ? meta.tags.map((tag, i) => (
+  const tags = meta.tags.map((tag, i) => (
     <Link key={i} href={`/tags/${tag}`}>
       {tag}
     </Link>
-  )): null;
-
+  ));
   return (
     <main className="px-6 max-w-6xl prose prose-headings:no-underline prose-slate mt-10 mx-auto">
       <h1 className="text-3xl mt-4 mb-0">{meta.title}</h1>
