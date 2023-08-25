@@ -6,6 +6,7 @@ import { StripeProvider } from './context/StripeContext'
 import Providers from './context/LocalizationProvider'
 import ToastProvider from './context/ToastProvider'
 import GoogleAnalytics from './components/GoogleAnalytics'
+import { CrispProvider } from './components/crisp-provider'
 
 
 export const metadata = {
@@ -16,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
+      <CrispProvider />
       <StripeProvider>
         <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
      <Providers>
