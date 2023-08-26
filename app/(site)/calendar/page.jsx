@@ -57,19 +57,15 @@ export default function Calendar() {
       timeZone: "America/New_York",
     }
 
-    if(!selectedDate ) {
+    if(!selectedDate) {
       toast.error("Please select a date");
       return;
     }
-    if(!time ) {
-      toast.error("Please select a time");
-      return;
-    }
-    if(!firstName ) {
+    if(!firstName) {
       toast.error("Please enter your first name");
       return;
     }
-    if(!lastName ) {
+    if(!lastName) {
       toast.error("Please enter your last name");
       return;
     }
@@ -77,7 +73,7 @@ export default function Calendar() {
       toast.error("Please enter your email");
       return;
     }
-    if(!address ) {
+    if(!address) {
       toast.error("Please enter your address");
       return;
     }
