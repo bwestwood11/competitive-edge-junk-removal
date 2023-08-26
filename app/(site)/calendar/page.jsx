@@ -41,6 +41,10 @@ export default function Calendar() {
     setSelectedDate(newDate);
   };
 
+  const handleTimeChange = (newTime) => {
+    setTime(newTime);
+  };
+
   // Create a user in database with the information they provided using the form and then redirect them to the confirmation page
   const createUser = async (e) => {
     const options = {
@@ -252,9 +256,7 @@ export default function Calendar() {
                     <SingleInputTimeRangeField
                       label="Time Range"
                       value={time}
-                      onChange={(newValue) =>
-                        setTime(dayjs(newValue).format("h:s A"))
-                      }
+                      onChange={handleTimeChange}
                     />
                   </div>
                 </div>
