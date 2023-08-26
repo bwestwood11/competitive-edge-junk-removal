@@ -42,7 +42,7 @@ export default function Calendar() {
   };
 
   const handleTimeChange = (newTime) => {
-    setTime(newTime);
+    setTime(newTime.map(t => dayjs(t)));
   };
 
   // Create a user in database with the information they provided using the form and then redirect them to the confirmation page
@@ -86,13 +86,13 @@ export default function Calendar() {
       return;
     }
     
-
+// new Intl.DateTimeFormat("en-US", timeoptions).format(time[0]) + " - " + new Intl.DateTimeFormat("en-US", timeoptions).format(time[1])
     const response = await fetch("/api/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         selectedDate: new Intl.DateTimeFormat("en-US", options).format(selectedDate),
-        time: new Intl.DateTimeFormat("en-US", timeoptions).format(time[0]) + " - " + new Intl.DateTimeFormat("en-US", timeoptions).format(time[1]),
+        time: `${time[0].format("hh:mm A")} - ${time[1].format("hh:mm A")}`,
         firstName,
         lastName,
         email,
