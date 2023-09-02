@@ -9,9 +9,9 @@ import junk from '../../public/junk.jpg'
 
 const Services = () => {
   return (
-    <section className="flex items-center justify-center container mx-auto">
+    <section className="flex items-center bg-gray-50 justify-center container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 
@@ -23,7 +23,7 @@ const Services = () => {
              <p className="text-slate-500 text-lg mt-3">Our furniture removal service includes the responsible and efficient removal of unwanted furniture from individuals' homes, freeing up valuable space and minimizing clutter.</p>
          </div>
          </div>
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 
@@ -35,7 +35,7 @@ const Services = () => {
              <p className="text-slate-500 text-lg mt-3">Our mattress removal service involves the responsible and eco-friendly disposal of unwanted mattresses, allowing individuals to free up space and minimize clutter in their homes or businesses.</p>
          </div>
          </div>
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 
@@ -47,7 +47,7 @@ const Services = () => {
              <p className="text-slate-500 text-lg mt-3">Our team will handle the entire cleanout process, from sorting and packing to transportation and disposal, so you can sit back and relax. We understand that house cleanouts can be overwhelming, which is why we provide a stress-free solution for our clients.</p>
          </div>
          </div>
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 
@@ -59,7 +59,7 @@ const Services = () => {
              <p className="text-slate-500 text-lg mt-3">A team of experts who have the tools and experience necessary to safely and efficiently remove your unwanted hot tub, regardless of its size or location.</p>
          </div>
          </div>
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 
@@ -71,7 +71,7 @@ const Services = () => {
              <p className="text-slate-500 text-lg mt-3">Our dumpster rental service is the best choice for individuals and businesses looking for affordable, reliable, and efficient waste management solutions.</p>
          </div>
          </div>
-         <div className="rounded-xl shadow-lg text-center hover:scale-105 ease-in duration-300">
+         <div className="rounded-xl shadow-lg bg-white text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">
                  <Image 

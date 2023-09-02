@@ -2,7 +2,7 @@
 
 export default function Stats() {
     return (
-      <div className="bg-gray-50 z-10 sm:mt-20">
+      <div className="bg-gray-50 z-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -13,7 +13,7 @@ export default function Stats() {
             </p>
           </div>
         </div>
-        <div className="mt-10 bg-white pb-12 sm:pb-16">
+        <div className="mt-10 bg-gray-50 pb-12 sm:pb-16">
           <div className="relative">
             <div className="absolute inset-0 h-1/2 bg-gray-50" />
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">

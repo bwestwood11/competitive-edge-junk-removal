@@ -248,16 +248,17 @@ export default function Calendar() {
                       value={selectedDate}
                       onChange={handleDateChange}
                     />
-                    <div className="text-center ">
-                      <h2 className="font-bold mb-4">
-                        Give Us a 4-Hour Time Frame
+                    <div className="text-center flex flex-col w-2/3 mx-auto align-middle justify-center ">
+                      <h2 className="font-semibold leading-7 text-gray-900 mb-4">
+                        Give us a 4-hour time frame for delivery.
                       </h2>
-                    </div>
+                   
                     <SingleInputTimeRangeField
                       label="Time Range"
                       value={time}
                       onChange={handleTimeChange}
-                    />
+                    /> 
+                    </div>
                   </div>
                 </div>
                 <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
