@@ -42,48 +42,6 @@ const Hero2 = () => {
             Order Your Dumpster with Confidence 
           </p>
         </div>
-       
-      {/* Modal */}
-      {/* {showModal && (
-        <div className="fixed inset-0 z-30 flex justify-center items-center">
-          <div
-            className="absolute inset-0 bg-black opacity-50"
-            onClick={toggleModal}
-          ></div>
-          <div className="bg-white p-8 rounded-lg shadow-lg z-40">
-            <h2 className="text-2xl font-bold mb-4">
-              Start Your Dumpster Rental Today!
-            </h2>
-            <p className="mb-4">
-              Check out all of our pricing options and schedule your dumpster
-              rental today!
-            </p>
-            <button
-              className="bg-[#f1592a] hover:bg-[#f1592a]/70 text-white font-bold py-2 px-4 rounded"
-              onClick={PricingPage}
-            >
-              Pricing Page
-            </button>
-          </div>
-        </div>
-      )} */}
-
-      {/* Box */}
-      {/* <div className="absolute sm:right-40 bottom-5 sm:bottom-0 z-10">
-        <div className="bg-white stroke-black stroke-2 p-4 rounded-lg shadow-lg max-w-[280px] max-h-[260px] sm:max-w-[400px] xl:max-w-[600px]">
-          <h1 className="text-2xl sm:text-4xl font-bold mb-4">Rent A Dumpster Today</h1>
-          <p className="text-gray-700 mb-4">
-            Rent a roll-off dumpster for your home, business, or project. Click
-            the button below to get started today!
-          </p>
-          <button
-            className="bg-[#f1592a] hover:bg-[#f1592a]/70 text-white font-bold py-2 px-4 rounded"
-            onClick={toggleModal}
-          >
-            Rent Here
-          </button>
-        </div>
-      </div> */}
     </div>
     <div className="w-full gap-4 z-10 grid grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto text-left mt-10 sm:mt-[50px]">
             <div className="border hidden sm:block border-gray-300 shadow-xl basis-1/2 p-5 rounded-xl">

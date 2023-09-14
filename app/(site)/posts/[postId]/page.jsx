@@ -49,17 +49,17 @@ export default async function Post({ params: { postId } }) {
     </Link>
   ));
   return (
-    <main className="px-6 max-w-6xl prose prose-headings:no-underline prose-slate mt-10 mx-auto">
-      <h1 className="text-3xl mt-4 mb-0">{meta.title}</h1>
-      <p className="mt-2">{pubDate}</p>
-      <article className="mt-4">{content}</article>
-      <section>
-        <h3>Related:</h3>
-        <div className="flex flex-row gap-4">{tags}</div>
-      </section>
-      <p>
-        <Link href="/blog">Back to blog</Link>
-      </p>
-    </main>
+    <main className="px-6 max-w-3xl pb-10 mx-auto prose prose-xl prose-slate dark:prose-invert pt-16">
+    <h1 className="text-3xl font-bold mt-4 mb-0">{meta.title}</h1>
+    <p className="mt-2 font-medium">{pubDate}</p>
+    <article className="mt-4 text-gray-900 leading-7 tracking-wide">{content}</article>
+    <section>
+      <h3>Related:</h3>
+      <div className="flex flex-row gap-4">{tags}</div>
+    </section>
+    <p>
+      <Link href="/blog">Back to blog</Link>
+    </p>
+  </main>
   );
 }
