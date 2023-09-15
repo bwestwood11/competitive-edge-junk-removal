@@ -3,6 +3,12 @@ import { getPostsMeta, getPostByName } from "@/lib/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import "highlight.js/styles/atom-one-dark.css";
+import { Crimson_Pro } from "next/font/google";
+
+const crimson = Crimson_Pro({
+  weight: "500",
+  subsets: ["latin"],
+})
 
 export const revalidate = 10;
 
@@ -49,7 +55,8 @@ export default async function Post({ params: { postId } }) {
     </Link>
   ));
   return (
-    <main className="px-6 max-w-3xl pb-10 mx-auto prose prose-xl prose-slate dark:prose-invert pt-16">
+    <main className="px-6 max-w-3xl pb-10 mx-auto prose prose-lg prose-stone dark:prose-invert pt-16">
+      <div className={crimson.className}>
     <h1 className="text-3xl font-bold mt-4 mb-0">{meta.title}</h1>
     <p className="mt-2 font-medium">{pubDate}</p>
     <article className="mt-4 text-gray-900 leading-7 tracking-wide">{content}</article>
@@ -60,6 +67,7 @@ export default async function Post({ params: { postId } }) {
     <p>
       <Link href="/blog">Back to blog</Link>
     </p>
+    </div>
   </main>
   );
 }
