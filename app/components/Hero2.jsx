@@ -1,9 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import React, { useState } from "react";
 import heroImage from "../../public/heroImage.jpg";
-import { useRouter } from "next/navigation";
 import heroimg from "../../public/howitworks.png";
 import { GiSmartphone } from "react-icons/gi";
 import { AiOutlineMail } from "react-icons/ai";
@@ -11,15 +7,6 @@ import { BsCalendarCheck } from "react-icons/bs";
 import Link from "next/link";
 
 const Hero2 = () => {
-  const [showModal, setShowModal] = useState(false);
-  const router = useRouter();
-  const toggleModal = () => {
-    setShowModal(!showModal);
-  };
-
-  const PricingPage = () => {
-    router.push("/pricing");
-  };
 
   return (
     <div className="h-screen bg-gray-50">
