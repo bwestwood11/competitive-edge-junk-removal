@@ -55,6 +55,7 @@ const HomeHeroSection = () => {
               alt="Dumpster Image"
               width={1000}
               height={1000}
+              priority
             />
           </div>
         </div>

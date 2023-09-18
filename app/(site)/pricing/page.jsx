@@ -12,7 +12,7 @@ export default function Pricing() {
 
 
   return (
-    <section className="w-full bg-gray-50">
+    <section className="w-full bg-gray-50 pb-20">
       <div className="w-screen h-[65vh] relative">
         <div className="absolute top-0 left-0 w-full h-[65vh] bg-gradient-to-t from-black to-transparent z-10" />
         <Image
