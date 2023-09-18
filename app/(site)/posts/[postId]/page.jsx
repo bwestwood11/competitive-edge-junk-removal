@@ -59,7 +59,7 @@ export default async function Post({ params: { postId } }) {
       <div className={crimson.className}>
     <h1 className="text-3xl font-bold mt-4 mb-0">{meta.title}</h1>
     <p className="mt-2 font-medium">{pubDate}</p>
-    <article className="mt-4 text-gray-900 leading-7 tracking-wide">{content}</article>
+    <article className="mt-4 text-gray-600 leading-7 tracking-wide">{content}</article>
     <section>
       <h3>Related:</h3>
       <div className="flex flex-row gap-4">{tags}</div>
