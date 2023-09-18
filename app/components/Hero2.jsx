@@ -28,7 +28,7 @@ const Hero2 = () => {
       <Image
         className="absolute inset-0 z-1"
         src={heroimg}
-        alt="/"
+        alt="tampa dumpster rentals"
         layout="fill"
         objectFit="cover"
         objectPosition="sm:0px -80px"
