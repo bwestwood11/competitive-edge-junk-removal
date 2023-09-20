@@ -7,6 +7,7 @@ import garage from "../../../public/garage.jpg";
 import hottub from "../../../public/hottub.jpg";
 import shed from "../../../public/shed1.jpg";
 import junk from "../../../public/junk.jpg";
+import CTA from "@/app/components/CTA";
 
 const junkRemovalPage = () => {
   return (
@@ -214,6 +215,7 @@ const junkRemovalPage = () => {
           </div>
         </div>
       </div>
+      <CTA />
     </section>
   );
 };
