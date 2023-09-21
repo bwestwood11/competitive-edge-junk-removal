@@ -55,7 +55,7 @@ const junkRemovalPage = () => {
         />
         </div>
         <div className="basis-1/2">
-          <h2 className="text-center font-bold text-3xl">Items We Take</h2>
+          <h2 className="text-center font-bold text-3xl text-gray-900">Items We Take</h2>
           <ul className="max-w-2xl mx-auto mt-8 grid grid-cols-2 px-8 sm:px-0 gap-6">
             <li className="flex flex-row gap-4 justify-center items-center">
               <BsFillCheckCircleFill className="inline-block sm:text-xl text-[#f1592a]" />
