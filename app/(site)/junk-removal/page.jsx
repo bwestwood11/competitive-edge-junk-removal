@@ -43,7 +43,7 @@ const junkRemovalPage = () => {
           />
         </div>
       </div>
-      <div className="max-w-7xl mx-auto pt-20 flex sm:flex-row flex-col-reverse px-6 sm:px-0">
+      <div className="max-w-7xl mx-auto sm:py-20 pt-20 flex sm:flex-row flex-col-reverse px-6 sm:px-0">
         <div className="basis-1/2">
         <Image 
         src='/dumpster3.jpg'
@@ -51,10 +51,10 @@ const junkRemovalPage = () => {
         width={500}
         height={500}
         priority
-        className='rounded-xl shadow-xl mx-auto mt-10 shadow-black/60'
+        className='rounded-xl sm:inline-block hidden shadow-xl mx-auto mt-10 shadow-black/60'
         />
         </div>
-        <div className="basis-1/2">
+        <div className="basis-1/2 align-middle items-center justify-center flex flex-col">
           <h2 className="text-center font-bold text-3xl text-gray-900">Items We Take</h2>
           <ul className="max-w-2xl mx-auto mt-8 grid grid-cols-2 px-8 sm:px-0 gap-6">
             <li className="flex flex-row gap-4 justify-center items-center">
@@ -66,7 +66,7 @@ const junkRemovalPage = () => {
             <li className="flex flex-row gap-4 justify-center items-center">
               <BsFillCheckCircleFill className="inline-block sm:text-xl text-[#f1592a]" />
               <p className="text-gray-600 sm:text-xl text-lg leading-7 tracking-wide">
-                Sofa/Couch
+                Couches
               </p>
             </li>
             <li className="flex flex-row gap-4 justify-center items-center">
@@ -102,7 +102,7 @@ const junkRemovalPage = () => {
             <li className="flex flex-row gap-4 justify-center items-center">
               <BsFillCheckCircleFill className="inline-block sm:text-xl text-[#f1592a]" />
               <p className="text-gray-600 sm:text-xl text-lg leading-7 tracking-wide">
-                Cabinets
+                & More ...
               </p>
             </li>
           </ul>
@@ -150,9 +150,9 @@ const junkRemovalPage = () => {
               <Image src={garage} alt="/" />
             </div>
             <h5 className="text-2xl md:text-3xl font-medium mt-3">
-              House Cleanouts
+              House Clean-outs
             </h5>
-            <h3 className="font-slate-500 font-medium mt-2">starting at $99</h3>
+            <h3 className="font-slate-500 font-medium mt-2">starting at $399</h3>
             <p className="text-slate-500 text-lg mt-3">
               Our team will handle the entire cleanout process, from sorting and
               packing to transportation and disposal, so you can sit back and
@@ -203,14 +203,15 @@ const junkRemovalPage = () => {
               <Image src={junk} alt="/" />
             </div>
             <h5 className="text-2xl md:text-3xl font-medium mt-3">
-              Junk Removal
+              Single Item Pick-ups
             </h5>
+            <h3 className="font-slate-500 font-medium mt-2">
+              starting at $85
+            </h3>
             <p className="text-slate-500 text-lg mt-3">
-              We specialize in removing any and all types of junk, including
-              furniture, appliances, electronics, yard waste, construction
-              debris, and more, offering a comprehensive junk removal service
-              that allows you to quickly and easily get rid of unwanted items
-              and clutter in your home or business.
+              Sometimes all you need is a single item picked up. We can do that
+              for you. We will come to your location and pick up the item and
+              dispose of it properly. 
             </p>
           </div>
         </div>
