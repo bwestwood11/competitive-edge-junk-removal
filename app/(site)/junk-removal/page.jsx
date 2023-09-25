@@ -9,6 +9,14 @@ import shed from "../../../public/shed1.jpg";
 import junk from "../../../public/junk.jpg";
 import CTA from "@/app/components/CTA";
 
+export const metadata = {
+  title: "Junk Removal Services in Tampa, FL",
+  description: "Junk removal services in Tampa, FL. We offer junk removal services for your home or business.",
+  alternates: {
+    canonical: "https://www.competitiveedgedumpsters.com/junk-removal",
+  },
+};
+
 const junkRemovalPage = () => {
   return (
     <section className="w-full h-full py-20">

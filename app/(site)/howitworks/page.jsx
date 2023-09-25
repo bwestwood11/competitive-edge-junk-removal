@@ -7,7 +7,7 @@ import DumpsterSizes from "@/app/components/DumpsterSizes";
 import HowItWorksSection from "@/app/components/HowItWorksSection";
 
 export const metadata = {
-    title: "How It Works",
+    title: "How It Works | Competitive Edge Dumpsters",
     description: "Order a dumpster for junk removal services, waste management solutions, and more.",
 };
 

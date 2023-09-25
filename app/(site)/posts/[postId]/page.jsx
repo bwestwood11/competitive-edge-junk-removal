@@ -41,6 +41,9 @@ export async function generateMetadata({ params: { postId } }) {
   return {
     title: post.meta.title,
     description: post.meta.description,
+    alternates: {
+      canonical: `https://www.competitiveedgedumpsters.com/posts/${postId}`
+    }
   };
 }
 

@@ -1,15 +1,17 @@
-'use client'
-
 import Image from "next/image";
 import axios from "axios";
-import { useEffect, useState, useContext } from "react";
-import PricingCard from "../../components/PricingCard";
-import { StripeContext } from "../../context/StripeContext";
 import pricingImage from '/public/pricingImage.jpg';
+import PricingDisplay from "@/app/components/PricingDisplay";
+
+export const metadata = {
+  title: "Pricing for Dumpster Rentals in Tampa, FL",
+  description: "Dumpster rental pricing for Tampa, FL. We offer 10, 15, and 20 yard dumpsters for rent.",
+  alternates: {
+    canonical: "https://www.competitiveedgedumpsters.com/pricing",
+  },
+};
 
 export default function Pricing() {
- const [prices, setPrices] = useContext(StripeContext);
-
 
   return (
     <section className="w-full bg-gray-50 pb-20">
@@ -47,13 +49,7 @@ export default function Pricing() {
         </div>
        
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1040px] items-center mx-auto">
-        {prices && 
-        prices.map((price) => (
-          <PricingCard
-           price={price}
-           key={price.id}
-           />
-        ))}
+        <PricingDisplay />
       </div>
       <div className="w-full mt-20 bg-gray-50 grid gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto">
       <div className="border-2 flex sm:w-full w-3/4 mx-auto border-gray-500 rounded-lg shadow-xl">

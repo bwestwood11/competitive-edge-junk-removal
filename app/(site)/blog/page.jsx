@@ -3,6 +3,14 @@ import { getPostsMeta } from "@/lib/posts";
 
 export const revalidate = 10;
 
+export const metadata = {
+  title: "Blog | Competitive Edge Dumpsters",
+  description: "Read our blog for tips and tricks on dumpster rentals, junk removal, and more.",
+  alternates: {
+    canonical: "https://www.competitiveedgedumpsters.com/blog",
+  },
+};
+
 
 export default async function Posts() {
     const posts = await getPostsMeta();
