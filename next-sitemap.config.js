@@ -1,6 +1,6 @@
 
 module.exports = {
-    siteUrl: 'https://competitiveedgedumpsters.com/' || 'http://localhost:3000',
+    siteUrl: 'https://competitiveedgedumpsters.com/',
     generateRobotsTxt: true,
     generateIndexSitemap: false
 }
