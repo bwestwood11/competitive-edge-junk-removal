@@ -1,6 +1,6 @@
 
 module.exports = {
-    siteUrl: 'https://competitiveedgedumpsters.com/',
+    siteUrl: 'https://www.competitiveedgedumpsters.com/',
     generateRobotsTxt: true,
     generateIndexSitemap: false
 }
