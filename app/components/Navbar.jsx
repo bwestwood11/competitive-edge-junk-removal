@@ -58,7 +58,7 @@ const Navbar = () => {
                 Prices & Sizes
               </li>
             </Link>
-            <Link href="/howitworks">
+            <Link href="/how-it-works">
               <li className="font-semibold hover:text-[#f1592a]">
                 How it Works
               </li>
@@ -129,7 +129,7 @@ const Navbar = () => {
                 Pricing
               </li>
             </Link>
-            <Link href="/howitworks">
+            <Link href="/how-it-works">
               <li
                 onClick={() => setMenuOpen(false)}
                 className="py-4 cursor-pointer"

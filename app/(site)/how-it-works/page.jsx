@@ -9,6 +9,9 @@ import HowItWorksSection from "@/app/components/HowItWorksSection";
 export const metadata = {
     title: "How It Works | Competitive Edge Dumpsters",
     description: "Order a dumpster for junk removal services, waste management solutions, and more.",
+    alternates: {
+        canonical: "https://www.competitiveedgedumpsters.com/how-it-works",
+    },
 };
 
 export default function Howitworks() {
