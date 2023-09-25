@@ -12,6 +12,9 @@ import { CrispProvider } from './components/crisp-provider'
 export const metadata = {
   title: 'Competitive Edge Junk Removal',
   description: 'Tampa Bays Best Junk Removal & Dumpster Rental Company.',
+  alternates: {
+    canonical: 'https://www.competitiveedgejunkremoval.com/',
+  }
 }
 
 export default function RootLayout({ children }) {
