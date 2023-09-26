@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://competitiveedgedumpsters.com/
+Host: https://www.competitiveedgedumpsters.com
 
 # Sitemaps
-Sitemap: https://competitiveedgedumpsters.com/sitemap.xml
+Sitemap: https://www.competitiveedgedumpsters.com/sitemap.xml
