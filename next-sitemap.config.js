@@ -1,6 +1,6 @@
 
 module.exports = {
-    siteUrl: 'https://www.competitiveedgedumpsters.com',
+    siteUrl: process.env.SITE_URL || 'http://localhost:3000',
     generateRobotsTxt: true,
     generateIndexSitemap: false
 }
