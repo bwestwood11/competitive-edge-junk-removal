@@ -21,7 +21,7 @@ const HomeHeroSection = () => {
         </div>
  
       <div className="absolute inset-0" style={{pointerEvents: 'all'}}>
-        <div className="max-w-7xl flex-col sm:flex sm:flex-row mx-auto h-2/5 sm:mt-40 mt-12 px-6 sm:px-0">
+        <div className="max-w-7xl flex-col sm:flex sm:flex-row mx-auto h-2/5 sm:mt-40 md:mt-20 lg:mt-40 mt-12 px-6 sm:px-0">
           {/* left side main text */}
           <div className="basis-1/2 sm:px-8">
             <h1 className="text-6xl font-bold">
@@ -49,17 +49,18 @@ const HomeHeroSection = () => {
             </div>
           </div>
           {/* right side main image */}
-          <div className="basis-1/2 flex mt-8 sm:mt-0">
+          <div className="basis-1/2 flex pr-4 sm:pr-0 justify-center mt-8 sm:mt-0">
             <Image
               src="/dumpsterheroimg.png"
               alt="Dumpster Image"
               width={1000}
               height={1000}
               priority
+              className="lg:w-full lg:h-full md:w-4/5 md:h-4/5 w-full h-full"
             />
           </div>
         </div>
-           <div className="w-full hidden gap-4 sm:flex max-w-5xl mx-auto text-left mt-20">
+           <div className="w-full hidden gap-4 sm:flex max-w-5xl px-8 md:pt-20 lg:pt-10 xl:pt-0 mx-auto text-left mt-20">
             <div className="border border-gray-300 shadow-xl basis-1/2 p-5 rounded-xl">
               <div className="flex flex-row items-center gap-3">
                 <GiSmartphone size={40} className="text-green-500" />

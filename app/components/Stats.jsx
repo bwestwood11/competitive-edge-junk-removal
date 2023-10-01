@@ -2,7 +2,7 @@
 
 export default function Stats() {
     return (
-      <div className="bg-gray-50 z-10">
+      <div className="bg-gray-50 lg:pt-10 md:pt-20 z-10">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
