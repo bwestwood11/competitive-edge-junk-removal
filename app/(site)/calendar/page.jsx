@@ -240,7 +240,7 @@ export default function Calendar() {
                     </Dialog.Title>
                     <div className="mt-2">
                       <p className="text-sm text-gray-500">
-                        Please Select a date for drop off:
+                        Please Select a date for drop off
                       </p>
                     </div>
                     <DateCalendar
