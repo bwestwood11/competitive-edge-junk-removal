@@ -10,7 +10,7 @@ import junk from '../../public/junk.jpg'
 const Services = () => {
   return (
     <section className="flex items-center bg-gray-50 w-full justify-center mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 container gap-8 px-8">
          <div className="rounded-xl bg-white shadow-lg text-center hover:scale-105 ease-in duration-300">
          <div className="p-5 flex flex-col">
              <div className="rounded-xl overflow-hidden">

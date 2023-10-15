@@ -10,6 +10,8 @@ import Services from "./components/Services";
 import Stats from "./components/Stats";
 import ServiceAreas from "./components/ServiceAreas";
 import HomeHeroSection from "./components/HomeHeroSection";
+import ReviewComponent from "./components/ReviewComponent";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +20,7 @@ export default function Home() {
     <div>
       <HomeHeroSection />
       <Stats /> 
+      <ReviewComponent />
       <ServiceAreas /> 
       <Services />
       <Faq />

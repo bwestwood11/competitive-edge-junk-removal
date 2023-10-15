@@ -56,7 +56,7 @@ const HomeHeroSection = () => {
               width={1000}
               height={1000}
               priority
-              className="lg:w-full lg:h-full md:w-4/5 md:h-4/5 w-full h-full"
+              className="lg:w-full lg:h-full xl:w-4/5 md:w-4/5 md:h-4/5 w-full h-full"
             />
           </div>
         </div>
