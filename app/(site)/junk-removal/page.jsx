@@ -38,7 +38,7 @@ const junkRemovalPage = () => {
             So, if you do not want to even deal with your junk at all. We do
             offer a hassle-free, stress-free process that will give you a piece
             of mind! Say goodbye to unwanted items without ever lifting a
-            finger.
+            finger!
           </p>
         </div>
         <div className="basis-1/2 pt-8 sm:pt-0">
