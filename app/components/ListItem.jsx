@@ -11,7 +11,7 @@ export default function ListItem({ post }) {
   return (
     <li className="mt-4">
       <div className="flex flex-col group cursor-pointer">
-        <div className="relative w-full h-60 sm:h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
+        <div className="relative w-full h-60 sm:h-70 lg:h-80 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out">
           <Link href={`/posts/${id}`}>
             <Image
               src={cover_image}

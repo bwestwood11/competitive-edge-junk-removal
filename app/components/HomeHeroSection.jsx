@@ -38,7 +38,7 @@ const HomeHeroSection = () => {
               Make your next project easier!
             </p>
             <Link href="/pricing">
-            <button className="mt-6 z-0 mb-2 w-1/2 sm:w-1/3 p-2 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
+            <button className="mt-6 z-0 mb-2 w-1/2 sm:w-1/3 p-2 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm whitespace-nowrap">
               Book Today
             </button>
             </Link>
@@ -56,7 +56,7 @@ const HomeHeroSection = () => {
               width={1000}
               height={1000}
               priority
-              className="lg:w-full lg:h-full xl:w-4/5 md:w-4/5 md:h-4/5 w-full h-full"
+              className="lg:w-full lg:h-full xl:w-4/5 md:w-full md:h-4/5 w-full h-full"
             />
           </div>
         </div>

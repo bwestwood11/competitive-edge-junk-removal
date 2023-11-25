@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link href="/pricing">
-            <button className="hidden md:flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
+            <button className="hidden lg:flex w-full justify-center rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
               Rent a Dumpster
             </button>
           </Link>
