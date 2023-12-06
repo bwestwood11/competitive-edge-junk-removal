@@ -200,7 +200,7 @@ function PricingCard({ price }) {
                 currency: "USD",
               })}{" "}
             </h1>
-            <h3 className="pl-1 mt-2">Additional weight just $.05 /lb</h3>
+            <h3 className="pl-1 mt-2">Additional weight just $.04 /lb</h3>
           </div>
           <ul className="flex justify-center">
             <li className="text-xl font-bold">{dynamicDescription(price)}</li>
