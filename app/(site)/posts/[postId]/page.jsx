@@ -64,6 +64,7 @@ export default async function Post({ params: { postId } }) {
       {tag}
     </Link>
   ));
+  
   return (
     <main className="px-6 max-w-3xl pb-10 mx-auto prose prose-lg prose-stone dark:prose-invert pt-16">
       <div className={sans.className}>
