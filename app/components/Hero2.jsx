@@ -21,7 +21,7 @@ const Hero2 = () => {
         objectPosition="sm:0px -80px"
         priority
       />
-       <div className="pt-2 sm:pt-0 absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center">
+       <div className="pt-2 sm:pt-0 absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center px-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 z-[10]">
             HOW IT WORKS
           </h1>

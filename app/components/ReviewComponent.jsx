@@ -79,7 +79,7 @@ const ReviewComponent = () => {
           <AiFillStar className="text-[#F59E0B] text-4xl mx-auto mt-2" />
           <AiFillStar className="text-[#F59E0B] text-4xl mx-auto mt-2" />
           </div>
-          <p className="text-sm">Based on <span className="font-bold">22 reviews</span></p>
+          <p className="text-sm">Based on <span className="font-bold">24 reviews</span></p>
           <Image
             src="/google-logo-transparent.png"
             alt="user1"

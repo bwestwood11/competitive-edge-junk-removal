@@ -39,11 +39,11 @@ export default async function TagPostList({ params: { tag } }) {
 
   return (
     <>
-      <h2 className="text-3xl text-center pt-36 mb-0">
+      <h2 className="text-3xl font-bold tracking-tight text-center pt-36 mb-0">
         Other articles related to: {tag}
       </h2>
-      <section className="mt-6 mx-auto max-w-2xl">
-        <ul className="w-full list-none p-0">
+      <section className="mt-6 mx-auto max-w-7xl">
+        <ul className="w-full grid sm:grid-cols-2 gap-20 p-0">
           {tagPosts.map((post) => (
             <ListItem key={post.id} post={post} />
           ))}

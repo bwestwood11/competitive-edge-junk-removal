@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import "highlight.js/styles/atom-one-dark.css";
 import { Crimson_Pro } from "next/font/google";
 import { Source_Sans_3 } from "next/font/google";
+import CTABlog from '@/app/components/CTABlog'
+import Image from "next/image";
 
 const crimson = Crimson_Pro({
   weight: "500",
@@ -66,9 +68,23 @@ export default async function Post({ params: { postId } }) {
     <main className="px-6 max-w-3xl pb-10 mx-auto prose prose-lg prose-stone dark:prose-invert pt-16">
       <div className={sans.className}>
     <h1 className="text-3xl font-bold mt-4 mb-0">{meta.title}</h1>
+    <div className="flex flex-col mt-1">
+          <p className="font-bold my-1">{pubDate}</p>
+          <div className="flex flex-row items-center gap-3">
+          <Image 
+          src='/brian-headshot.png'
+          alt="brian"
+          width={40}
+          height={30}
+          className="rounded-full"
+          />
+            <p className="font-bold">Brian Westwood</p>
+          </div>
+      </div>
     <p className="mt-2 font-bold">{pubDate}</p>
     <article className="mt-4 text-gray-600 leading-7 tracking-wide">{content}</article>
     <section>
+     <CTABlog />
       <h3>Related:</h3>
       <div className="flex flex-row gap-4">{tags}</div>
     </section>
