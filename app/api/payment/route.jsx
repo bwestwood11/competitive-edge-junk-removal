@@ -26,7 +26,7 @@ export async function POST(request) {
     customer: stripeId,
     payment_intent_data: {
       setup_future_usage: "off_session",
-    }
+    },
     success_url: `https://competitiveedgedumpsters.com/success?email=${email}&priceId=${priceId}`,
     cancel_url: "https://competitiveedgedumpsters.com/cancel",
   });
