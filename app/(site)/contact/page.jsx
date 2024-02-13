@@ -211,7 +211,7 @@ export default function ContactPage() {
            </h1>
            <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
              <p className="text-lg leading-8 text-gray-600">
-               We have been in business since 2018 and have been growing ever since. We are a 
+               We have been in business since 2018 and we have been growing ever since. We are a 
                family owned and operated business that takes pride in our work and our customers.
              </p>
              <a href='mailto:brian@competitiveedgedumpsters.com'>
