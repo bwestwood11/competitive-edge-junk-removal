@@ -11,8 +11,7 @@ export const metadata = {
   },
 };
 
-export default function Pricing() {
-
+export default async function Pricing() {
   return (
     <section className="w-full bg-gray-50 pb-20">
       <div className="w-screen h-[65vh] relative">
