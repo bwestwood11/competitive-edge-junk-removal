@@ -9,7 +9,7 @@ export async function GET(request) {
         limit: 4,
         active: true,
      });
-     revalidatePath('/pricing')
+     revalidatePath(prices.data)
 
    return NextResponse.json(prices.data) 
 
