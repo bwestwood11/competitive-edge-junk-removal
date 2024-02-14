@@ -7,7 +7,8 @@ import { useRouter } from "next/navigation";
 
 function PricingCard({ price }) {
  const router = useRouter();
- console.log(price)
+ 
+ 
   const dynamicDescription = (price) => {
     if (price.nickname === "20-Yard Dumpster") {
       return (
