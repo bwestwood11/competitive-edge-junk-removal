@@ -7,5 +7,6 @@ export default function robots() {
             allow: '/',
             disallow: "/admin",
         },
+        sitemap: "https://www.competitiveedgedumpsters.com/sitemap.xml"
     }
 }

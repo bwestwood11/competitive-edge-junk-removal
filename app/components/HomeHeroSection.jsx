@@ -1,26 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { RiRecycleFill } from "react-icons/ri";
-import {GiSmartphone} from 'react-icons/gi'
+import { GiSmartphone } from "react-icons/gi";
 import { MdOutlineAttachMoney } from "react-icons/md";
 
 const HomeHeroSection = () => {
   return (
-    <div className="h-screen bg-gray-50 w-full relative isolate z-5" style={{pointerEvents: 'none'}}>
- <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-50 md:-top-0 lg:-top-50"
-          aria-hidden="true"
-        >
-          <div
-            className="relative -z-10 left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ffa256] to-[#e08700] opacity-40 sm:left-[calc(90%-30rem)] sm:w-[72.1875rem]"
-            style={{
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-          />
-        </div>
- 
-      <div className="absolute inset-0" style={{pointerEvents: 'all'}}>
+    <div
+    
+      className="h-screen bg-gray-50 w-full relative isolate z-5"
+      style={{ pointerEvents: "none" }}
+    >
+      <div
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-50 md:-top-0 lg:-top-50"
+        aria-hidden="true"
+      >
+        <div
+          className="relative -z-10 left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ffa256] to-[#e08700] opacity-40 sm:left-[calc(90%-30rem)] sm:w-[72.1875rem]"
+          style={{
+            clipPath:
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+          }}
+        />
+      </div>
+      <div className="absolute inset-0" style={{ pointerEvents: "all" }}>
         <div className="max-w-7xl flex-col flex lg:flex-row mx-auto h-2/5 md:h-full lg:h-2/5 sm:mt-40 md:mt-20 lg:mt-40 mt-12 px-6 sm:px-0">
           {/* left side main text */}
           <div className="basis-1/2 sm:px-8">
@@ -38,14 +41,15 @@ const HomeHeroSection = () => {
               Make your next project easier!
             </p>
             <Link href="/pricing">
-            <button className="mt-6 z-0 mb-2 w-1/2 sm:w-1/3 p-2 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm whitespace-nowrap">
-              Book Today
-            </button>
+              <button className="mt-6 z-0 mb-2 w-1/2 sm:w-1/3 p-2 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm whitespace-nowrap">
+                Book Today
+              </button>
             </Link>
-            <div className="flex flex-row w-full items-center"> 
-            <RiRecycleFill className="text-green-500" />
-              <p className="text-sm font-semibold w-full ml-2">Environment Friendly </p>
-             
+            <div className="flex flex-row w-full items-center">
+              <RiRecycleFill className="text-green-500" />
+              <p className="text-sm font-semibold w-full ml-2">
+                Environment Friendly{" "}
+              </p>
             </div>
           </div>
           {/* right side main image */}
@@ -60,35 +64,39 @@ const HomeHeroSection = () => {
             />
           </div>
         </div>
-           <div className="w-full hidden gap-4 sm:flex md:hidden lg:flex max-w-5xl px-8 md:pt-20 lg:pt-10 xl:pt-0 mx-auto text-left mt-20">
-            <div className="border border-gray-300 shadow-xl basis-1/2 p-5 rounded-xl">
-              <div className="flex flex-row items-center gap-3">
-                <GiSmartphone size={40} className="text-green-500" />
-               <h3 className="text-xl font-bold">EASY BOOKING</h3>
-              </div>
-              <p className="mt-2">
-                Book your dumpster rental online or by phone. We offer same day
-                delivery when available.
-              </p>
-              <Link href="/pricing">
-               <button className="mt-4 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">Book Now</button>
-              </Link>
+        <div className="w-full hidden gap-4 sm:flex md:hidden lg:flex max-w-5xl px-8 md:pt-20 lg:pt-10 xl:pt-0 mx-auto text-left mt-20">
+          <div className="border border-gray-300 shadow-xl basis-1/2 p-5 rounded-xl">
+            <div className="flex flex-row items-center gap-3">
+              <GiSmartphone size={40} className="text-green-500" />
+              <h3 className="text-xl font-bold">EASY BOOKING</h3>
             </div>
-            <div className="border border-gray-300 shadow-xl p-5 basis-1/2 rounded-xl">
-              <div className="flex flex-row items-center gap-3">
-                  <MdOutlineAttachMoney size={40} className="text-green-500" />
-               <h3 className="text-xl font-bold">UPFRONT PRICING </h3> 
-              </div>
-            
-               <p className="mt-2">
-                Book your dumpster rental online or by phone. We offer same day
-                delivery when available.
-              </p>
-              <Link href="/pricing">
-               <button className="mt-4 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">Pricing Page</button>
-              </Link>
-            </div>
+            <p className="mt-2">
+              Book your dumpster rental online or by phone. We offer same day
+              delivery when available.
+            </p>
+            <Link href="/pricing">
+              <button className="mt-4 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
+                Book Now
+              </button>
+            </Link>
           </div>
+          <div className="border border-gray-300 shadow-xl p-5 basis-1/2 rounded-xl">
+            <div className="flex flex-row items-center gap-3">
+              <MdOutlineAttachMoney size={40} className="text-green-500" />
+              <h3 className="text-xl font-bold">UPFRONT PRICING </h3>
+            </div>
+
+            <p className="mt-2">
+              Book your dumpster rental online or by phone. We offer same day
+              delivery when available.
+            </p>
+            <Link href="/pricing">
+              <button className="mt-4 rounded-md border border-transparent bg-[#f1592a] hover:bg-[#f1592a]/70 sm:text-xs sm:py-1 sm:px-2 md:text-sm md:py-2 md:px-4 text-sm font-medium text-white shadow-sm">
+                Pricing Page
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
