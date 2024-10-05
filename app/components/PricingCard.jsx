@@ -51,7 +51,7 @@ function PricingCard({ price }) {
           <div className="border" />
         </div>
       );
-    } else if (price.nickname === "15-Yard Dumpster") {
+    } else if (price.nickname === "15-yard dumpster") {
       return (
         <div className="mt-6 space-y-4">
           <div className="flex space-x-3">
@@ -91,7 +91,7 @@ function PricingCard({ price }) {
           <div className="border" />
         </div>
       );
-    } else if (price.nickname === "10-Yard Dumpster") {
+    } else if (price.nickname === "10-yard dumpster") {
       return (
         <div className="mt-6 space-y-4">
           <div className="flex space-x-3">
@@ -131,7 +131,7 @@ function PricingCard({ price }) {
           <div className="border" />
         </div>
       );
-    } else if (price.nickname === "24-Hour Special: 15-Yard Dumpster") {
+    } else if (price.nickname === "20-yard dumpster") {
       return (
         <div className="mt-6 space-y-4">
           <div className="flex space-x-3">
@@ -175,14 +175,24 @@ function PricingCard({ price }) {
   };
 
   const dynamicSubTitle = (price) => {
-    if (price.nickname === "20-Yard Dumpster") {
+    if (price.nickname === "20-yard dumpster") {
       return (<div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>);
-    } else if (price.nickname === "15-Yard Dumpster") {
+    } else if (price.nickname === "15-yard dumpster") {
       return (<div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>);
-    } else if (price.nickname === "10-Yard Dumpster") {
-      return (<div><h2 className="text-[#f1592a] mt-1">Weekend Special</h2></div>);
+    } else if (price.nickname === "10-yard dumpster") {
+      return (<div><h2 className="text-[#f1592a] mt-1">3-day rental</h2></div>);
     } 
   };
+
+  const dynamicWeightIncludedTitle = (price) => {
+       if (price.nickname === "20-yard dumpster") {
+                return "first 3,000lbs included"
+       } else if (price.nickname === "15-yard dumpster") {
+                return "first 2,000lbs included"
+       } else if (price.nickname === "10-yard dumpster") {
+                return "first 2,000lbs included"
+       }
+  }
 
 
   return (
@@ -191,7 +201,7 @@ function PricingCard({ price }) {
         <div className="bg-gray-100 h-28 items-center font-bold">
           <h4 className="text-3xl">{price.nickname}</h4>
           <p>{dynamicSubTitle(price)}</p>
-          <h3 className="text-xl mt-2">First 2,000lbs Included</h3>
+          <h3 className="text-lg font-medium mt-2">{dynamicWeightIncludedTitle(price)}</h3>
         </div>
         <div>
           <div className="flex flex-col items-center justify-center pt-4">
@@ -201,7 +211,7 @@ function PricingCard({ price }) {
                 currency: "USD",
               })}{" "}
             </h1>
-            <h3 className="pl-1 mt-2">Additional weight just $.04 /lb</h3>
+            <h3 className="pl-1 mt-2">Additional weight just $.05 /lb</h3>
           </div>
           <ul className="flex justify-center">
             <li className="text-xl font-bold">{dynamicDescription(price)}</li>
