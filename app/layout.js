@@ -1,38 +1,35 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import './globals.css'
-import { StripeProvider } from './context/StripeContext'
-import Providers from './context/LocalizationProvider'
-import ToastProvider from './context/ToastProvider'
-import GoogleAnalytics from './components/GoogleAnalytics'
-import { CrispProvider } from './components/crisp-provider'
-
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import "./globals.css";
+import { StripeProvider } from "./context/StripeContext";
+import Providers from "./context/LocalizationProvider";
+import ToastProvider from "./context/ToastProvider";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata = {
-  title: 'Competitive Edge Junk Removal',
-  description: 'Tampa Bays Best Junk Removal & Dumpster Rental Company.',
+  title: "Competitive Edge Junk Removal",
+  description: "Tampa Bays Best Junk Removal & Dumpster Rental Company.",
   alternates: {
-    canonical: 'https://www.competitiveedgedumpsters.com/',
-  }
-}
+    canonical: "https://www.competitiveedgedumpsters.com/",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <CrispProvider />
       <StripeProvider>
         <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
-     <Providers>
-      <body>
-        <ToastProvider />
-        <Header />
-        <Navbar />
-        {children}
-        <Footer />
-        </body>
-     </Providers>
-        </StripeProvider>
+        <Providers>
+          <body>
+            <ToastProvider />
+            <Header />
+            <Navbar />
+            {children}
+            <Footer />
+          </body>
+        </Providers>
+      </StripeProvider>
     </html>
-  )
+  );
 }

@@ -1,18 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  transpilePackages: ["next-mdx-remote"],
   images: {
     remotePatterns: [
       {
-          protocol: 'https',
-          hostname: 'raw.githubusercontent.com',
-          port: '',
-          pathname: '/bwestwood11/junk-removal-blog/main/images/**',
-        }
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        port: "",
+        pathname: "/bwestwood11/junk-removal-blog/main/images/**",
+      },
     ],
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -2,6 +2,7 @@ import Image from "next/image";
 import axios from "axios";
 import pricingImage from '/public/pricingImage.jpg';
 import PricingDisplay from "@/app/components/PricingDisplay";
+import { getPrices } from "@/actions/stripe";
 
 export const metadata = {
   title: "Pricing for Dumpster Rentals in Tampa, FL",
@@ -12,6 +13,8 @@ export const metadata = {
 };
 
 export default async function Pricing() {
+  const prices = await getPrices();
+  console.log(prices);
   return (
     <section className="w-full bg-gray-50 pb-20">
       <div className="w-screen h-[65vh] relative">
@@ -48,7 +51,7 @@ export default async function Pricing() {
         </div>
        
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-[1040px] items-center mx-auto">
-        <PricingDisplay />
+        <PricingDisplay prices={prices} />
       </div>
       <div className="w-full mt-20 bg-gray-50 grid gap-8 grid-cols-1 sm:grid-cols-2 max-w-6xl mx-auto">
       <div className="border-2 flex sm:w-full w-3/4 mx-auto border-gray-500 rounded-lg shadow-xl">
